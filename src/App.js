@@ -1,12 +1,13 @@
-import './App.css';
+// import Menu from "./components/Menu-section/Menu.js"
+import Menu from "./components/Menu-section/Menu.js"
+import ShowWeather from "./components/Weather-section/ShowWeather.js"
+
 
 export default function App() {
-  return (
-    <div>
-     <h1 className=' text-amber-600 text-6xl'>kaveh</h1>
-     <h1 className=' text-blue-500 text-6xl'>khorshidi</h1>
-    </div>
-  );
+   return (
+      <div>
+         <Menu />
+         <ShowWeather />
+      </div>
+   )
 }
-
-
