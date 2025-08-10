@@ -5,11 +5,15 @@ import DetailsWeather from "./DetailsWeather/DetailsWeather"
 
 export default function WeatherSection() {
    return (
-      <div className="w-6/10 h-full bg-black">
-         <div className=" bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-l-weather h-full ">
-            <Header />
-            <ShowWeather />
-            <DetailsWeather />
+      <div className="w-6/10 h-screen justify-between bg-black">
+         <div className=" p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-l-weather flex flex-col h-full">
+            <div className=" ">
+              <Header></Header>
+            </div>
+            <div className="  h-full flex ">
+              <DetailsWeather></DetailsWeather>
+              <ShowWeather></ShowWeather>
+            </div>
          </div>
       </div>
    )
