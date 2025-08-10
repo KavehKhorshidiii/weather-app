@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ShowWeather() {
   return (
-    <div className=' w-7/10 border-l-2 border-white/60'>
+    <div className=' w-7/10 border-l-2 border-white/80'>
       <div className='flex justify-center items-center'>
         <img src="./show weather img/cloud.png" alt="" />
       </div>

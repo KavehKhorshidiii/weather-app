@@ -10,7 +10,7 @@ export default function WeatherSection() {
             <div className=" ">
               <Header></Header>
             </div>
-            <div className="  h-full flex ">
+            <div className="  h-full flex py-20 ">
               <DetailsWeather></DetailsWeather>
               <ShowWeather></ShowWeather>
             </div>
