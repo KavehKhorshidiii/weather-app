@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+   /*  */
+   --radius-weather: 7rem;
+   /*  */
+   --color-weather-start: #4cc9ff;
+   --color-weather-mid: #2e9bff;
+   --color-weather-end: #0088ff;
+   /*  */
+}
