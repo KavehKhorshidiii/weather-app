@@ -10,5 +10,6 @@ export default function ShowWeather() {
         <span className=' text-white text-4xl'>Rain - Cloudy</span>
       </div>
     </div>
+
   )
 }
