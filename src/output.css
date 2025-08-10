@@ -186,6 +186,22 @@
   .table {
     display: table;
   }
+  .size-16 {
+    width: calc(var(--spacing) * 16);
+    height: calc(var(--spacing) * 16);
+  }
+  .size-26 {
+    width: calc(var(--spacing) * 26);
+    height: calc(var(--spacing) * 26);
+  }
+  .size-56 {
+    width: calc(var(--spacing) * 56);
+    height: calc(var(--spacing) * 56);
+  }
+  .size-86 {
+    width: calc(var(--spacing) * 86);
+    height: calc(var(--spacing) * 86);
+  }
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
