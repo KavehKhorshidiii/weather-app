@@ -16,9 +16,7 @@ export default function WeatherSection() {
     })
 
     useEffect(() => {
-        if (data) {
-            setWeatherData(data)
-        }
+        if (data) {setWeatherData(data)}
     }, [data])
 
 
@@ -29,7 +27,7 @@ export default function WeatherSection() {
                     <Header isCoords={setCoords}></Header>
                 </div>
                 <div className=" h-full flex py-20 ">
-                    <DetailsWeather></DetailsWeather>
+                    <DetailsWeather DataWeather={weatherData}></DetailsWeather>
                     <ShowWeather DataWeather={weatherData}></ShowWeather>
                 </div>
             </div>

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { IoSearch } from "react-icons/io5"
+import Counter from "../../../hooks/Counter"
 
 
 export default function ShowWeather({ DataWeather }) {
+
     const [Temp, setTemp] = useState(null)
     const [WeatherConditions, setWeatherConditions] = useState(null)
-
     const [iconCode, setIconCode] = useState(null)
     const [iconUrl, setIconUrl] = useState(null)
 
@@ -26,9 +27,14 @@ export default function ShowWeather({ DataWeather }) {
     return (
         <div className=" w-7/10 border-l-1 flex flex-col justify-center items-center border-white/80">
             <div className=" flex flex-col items-center">
-                <span className=" text-white font-bold text-9xl">{Temp}</span>
+
+
+                {/* <span className=" text-white font-bold text-9xl">{Temp}</span> */}
+                <span className=" text-white font-bold text-9xl">{<Counter targetNumber={Temp}></Counter>}</span>
+                
+
+
                 {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
-                {/* <span className=" text-white text-7xl">Today</span> */}
                 <span className=" text-white flex items-center text-3xl">
                     {WeatherConditions}
                     {iconUrl ? (
