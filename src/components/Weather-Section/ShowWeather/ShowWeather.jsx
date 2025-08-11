@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 
 export default function ShowWeather({ DataWeather }) {
 
-  
     const [Temp, setTemp] = useState(null)
     const [WeatherConditions, setWeatherConditions] = useState(null)
 
@@ -24,5 +23,6 @@ export default function ShowWeather({ DataWeather }) {
                 <span className=" text-white text-4xl">{WeatherConditions}</span>
             </div>
         </div>
+        
     )
 }
