@@ -2,29 +2,62 @@ import React, { useState } from "react"
 import { IoIosArrowBack } from "react-icons/io"
 import { IoLocationSharp } from "react-icons/io5"
 import { IoSearch } from "react-icons/io5"
+import { useQuery } from "@tanstack/react-query"
 
-export default function Header() {
+export default function Header({isCoords}) {
 
-   const [cityName, setCityName] = useState()
+    const [cityName, setCityName] = useState("")
+    const [locationSearch, setLocationSearch] = useState()
+    const [CityNameBoxVisible, setCityNameBoxVisible] = useState(true)
+    const [ConfirmedCity, setConfirmedCity] = useState()
 
-   const [locationSearch, setLocationSearch] = useState()
+    const { isLoading, data } = useQuery({
+        queryKey: ["locationName", locationSearch],
+        queryFn: () => fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&limit=5&appid=635afb9504c0f920b54fd97746f11cf3`).then((res) => res.json()),
+        enabled: !!locationSearch,
+    })
 
+    return (
+        <div className="items-center flex justify-between">
+            <div className=" text-white border-2 flex p-2 rounded-full justify-center items-center">
+                <IoIosArrowBack className="text-3xl"></IoIosArrowBack>
+            </div>
 
-   return (
-      <div className="items-center flex justify-between">
-         <div className=" text-white border-2 flex p-2 rounded-full justify-center items-center">
-            <IoIosArrowBack className="text-3xl"></IoIosArrowBack>
-         </div>
-         <div className=" flex relative justify-center w-1/2 items-center gap-1 text-white">
-            <input onChange={(e)=>setCityName(e.target.value)} className=" border-2 focus:border-4 outline-none px-5 text-3xl rounded-2xl w-full h-15" type="text" />
-            <button onClick={()=>setLocationSearch(cityName)} className=" absolute text-3xl right-5">
-               <IoSearch></IoSearch>
-            </button>
-         </div>
-         <div className=" flex justify-center items-center gap-1 text-white">
-            <IoLocationSharp className=" text-3xl"></IoLocationSharp>
-            <span className="text-3xl">{locationSearch ? locationSearch : "Location"}</span>
-         </div>
-      </div>
-   )
+            <div className=" relative flex justify-center w-1/2 items-center gap-1 text-white">
+                <input value={cityName} onChange={(e) => setCityName(e.target.value)} className=" border-2 focus:border-4 outline-none px-5 text-3xl rounded-2xl w-full h-15" type="text" />
+                <button
+                    onClick={() => {
+                        setLocationSearch(cityName)
+                        setCityNameBoxVisible(false)
+                    }}
+                    className=" absolute text-3xl right-5"
+                >
+                    <IoSearch></IoSearch>
+                </button>
+
+                <div className={`${CityNameBoxVisible ? "invisible" : "visible"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
+                    {data
+                        ? data.map((item) => (
+                              <span
+                                  className=""
+                                  onClick={() => {
+                                      setCityNameBoxVisible(true)
+                                      setConfirmedCity({ city: item.name, country: item.country })
+                                      setCityName("")
+                                      isCoords({ lat: item.lat, lon: item.lon })
+                                  }}
+                                  key={item.name}
+                              >
+                                  {item.name} - {item.country}
+                              </span>
+                          ))
+                        : null}
+                </div>
+            </div>
+            <div className=" flex justify-center items-center gap-1 text-white">
+                <IoLocationSharp className="text-3xl"></IoLocationSharp>
+                <span className="text-3xl">{isLoading ? "loading..." : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
+            </div>
+        </div>
+    )
 }
