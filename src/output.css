@@ -16,6 +16,10 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -300,6 +304,9 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
   .h-17 {
     height: calc(var(--spacing) * 17);
   }
@@ -440,6 +447,9 @@
   }
   .resize {
     resize: both;
+  }
+  .appearance-none {
+    appearance: none;
   }
   .flex-col {
     flex-direction: column;
@@ -601,6 +611,9 @@
   .px-15 {
     padding-inline: calc(var(--spacing) * 15);
   }
+  .py-0 {
+    padding-block: calc(var(--spacing) * 0);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -630,6 +643,15 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-7 {
     padding-bottom: calc(var(--spacing) * 7);
@@ -663,6 +685,22 @@
     font-size: var(--text-9xl);
     line-height: var(--tw-leading, var(--text-9xl--line-height));
   }
+  .leading-12 {
+    --tw-leading: calc(var(--spacing) * 12);
+    line-height: calc(var(--spacing) * 12);
+  }
+  .leading-\[4rem\] {
+    --tw-leading: 4rem;
+    line-height: 4rem;
+  }
+  .leading-\[5rem\] {
+    --tw-leading: 5rem;
+    line-height: 5rem;
+  }
+  .leading-\[10rem\] {
+    --tw-leading: 10rem;
+    line-height: 10rem;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -687,6 +725,44 @@
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
+  }
+  .placeholder\:flex {
+    &::placeholder {
+      display: flex;
+    }
+  }
+  .placeholder\:items-center {
+    &::placeholder {
+      align-items: center;
+    }
+  }
+  .placeholder\:justify-center {
+    &::placeholder {
+      justify-content: center;
+    }
+  }
+  .placeholder\:text-center {
+    &::placeholder {
+      text-align: center;
+    }
+  }
+  .placeholder\:text-2xl {
+    &::placeholder {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .placeholder\:text-lg {
+    &::placeholder {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .placeholder\:text-xl {
+    &::placeholder {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
   }
   .hover\:bg-amber-50 {
     &:hover {
@@ -749,6 +825,10 @@
   inherits: false;
   initial-value: 100%;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -771,6 +851,7 @@
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
     }

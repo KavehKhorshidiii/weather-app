@@ -4,8 +4,7 @@ import { IoLocationSharp } from "react-icons/io5"
 import { IoSearch } from "react-icons/io5"
 import { useQuery } from "@tanstack/react-query"
 
-export default function Header({isCoords}) {
-
+export default function Header({ isCoords }) {
     const [cityName, setCityName] = useState("")
     const [locationSearch, setLocationSearch] = useState()
     const [CityNameBoxVisible, setCityNameBoxVisible] = useState(true)
@@ -19,12 +18,14 @@ export default function Header({isCoords}) {
 
     return (
         <div className="items-center flex justify-between">
-            <div className=" text-white border-2 flex p-2 rounded-full justify-center items-center">
-                <IoIosArrowBack className="text-3xl"></IoIosArrowBack>
-            </div>
-
             <div className=" relative flex justify-center w-1/2 items-center gap-1 text-white">
-                <input value={cityName} onChange={(e) => setCityName(e.target.value)} className=" border-2 focus:border-4 outline-none px-5 text-3xl rounded-2xl w-full h-15" type="text" />
+                <input
+                    placeholder="Enter your City Name"
+                    value={cityName}
+                    onChange={(e) => setCityName(e.target.value)}
+                    className="placeholder:text-xl border-2 focus:border-4 outline-none px-5 pb-1 text-2xl rounded-2xl w-full h-16 "
+                    type="text"
+                />
                 <button
                     onClick={() => {
                         setLocationSearch(cityName)
@@ -34,8 +35,7 @@ export default function Header({isCoords}) {
                 >
                     <IoSearch></IoSearch>
                 </button>
-
-                <div className={`${CityNameBoxVisible ? "invisible" : "visible"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
+                <div className={`${CityNameBoxVisible ? "hidden" : "block"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
                     {data
                         ? data.map((item) => (
                               <span
@@ -54,6 +54,7 @@ export default function Header({isCoords}) {
                         : null}
                 </div>
             </div>
+
             <div className=" flex justify-center items-center gap-1 text-white">
                 <IoLocationSharp className="text-3xl"></IoLocationSharp>
                 <span className="text-3xl">{isLoading ? "loading..." : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
