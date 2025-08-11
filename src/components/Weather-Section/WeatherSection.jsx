@@ -18,7 +18,6 @@ export default function WeatherSection() {
     useEffect(() => {
         if (data) {
             setWeatherData(data)
-            console.log(data)
         }
     }, [data])
 

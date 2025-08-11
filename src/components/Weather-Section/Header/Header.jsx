@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { IoIosArrowBack } from "react-icons/io"
 import { IoLocationSharp } from "react-icons/io5"
 import { IoSearch } from "react-icons/io5"
 import { useQuery } from "@tanstack/react-query"
