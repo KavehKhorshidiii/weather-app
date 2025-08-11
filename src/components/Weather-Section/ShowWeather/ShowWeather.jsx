@@ -30,7 +30,7 @@ export default function ShowWeather({ DataWeather }) {
 
 
                 {/* <span className=" text-white font-bold text-9xl">{Temp}</span> */}
-                <span className=" text-white font-bold text-9xl">{<Counter targetNumber={Temp}></Counter>}</span>
+                <span className=" text-white font-bold text-9xl">{<Counter timerSpeed={50} targetNumber={Temp}></Counter>}</span>
                 
 
 

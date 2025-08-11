@@ -1,26 +1,40 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { FaWind } from "react-icons/fa"
 import { IoWater } from "react-icons/io5"
-import { TbGrain } from "react-icons/tb"
+import { BsCloudsFill } from "react-icons/bs"
+import Counter from "../../../hooks/Counter"
 
-export default function DetailsWeather() {
-   return (
-      <div className=" flex flex-col w-3/10  h-full justify-around ">
-         <div className="flex flex-col justify-center items-center">
-            <FaWind className=" text-white text-2xl"></FaWind>
-            <span className=" text-white text-3xl">9 km/h</span>
-            <span className=" text-white">Wind</span>
-         </div>
-         <div className="flex flex-col justify-center items-center">
-            <IoWater className=" text-white text-2xl"></IoWater>
-            <span className=" text-white text-3xl">31%</span>
-            <span className=" text-white">Humidity</span>
-         </div>
-         <div className="flex flex-col justify-center items-center">
-            <TbGrain className=" text-white text-2xl"></TbGrain>
-            <span className=" text-white text-3xl">93%</span>
-            <span className=" text-white">Chance of rain</span>
-         </div>
-      </div>
-   )
+export default function DetailsWeather({ DataWeather }) {
+    const [WindSpeed, setWindSpeed] = useState(null)
+    const [humidity, setHumidity] = useState(null)
+    const [Cloudiness, setCloudiness] = useState(null)
+
+    useEffect(() => {
+        if (DataWeather) {
+            setWindSpeed(Math.floor(DataWeather?.wind?.speed))
+            setHumidity(DataWeather.main.humidity)
+            setCloudiness(DataWeather.clouds.all)
+        }
+    }, [DataWeather])
+
+    return (
+        <div className=" flex flex-col w-3/10  h-full justify-around ">
+            <div className="flex flex-col justify-center items-center">
+                <FaWind className=" text-3xl text-white text-2xl"></FaWind>
+                <span className=" text-white text-3xl">{<Counter timerSpeed={80} targetNumber={WindSpeed}></Counter>} km/h</span>
+
+                <span className=" text-white">Wind</span>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+                <IoWater className=" text-3xl text-white text-2xl"></IoWater>
+                <span className=" text-white text-3xl">{<Counter timerSpeed={80} targetNumber={humidity}></Counter>}%</span>
+                <span className=" text-white">Humidity</span>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+                <BsCloudsFill className=" text-3xl text-white text-2xl"></BsCloudsFill>
+                <span className=" text-white text-3xl">{<Counter timerSpeed={80} targetNumber={Cloudiness}></Counter>}%</span>
+                <span className=" text-white">Clouds</span>
+            </div>
+        </div>
+    )
 }

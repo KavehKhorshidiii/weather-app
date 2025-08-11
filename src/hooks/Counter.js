@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-export default function Counter({ targetNumber }) {
+export default function Counter({ targetNumber , timerSpeed }) {
     const [number, setNumber] = useState(0)
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function Counter({ targetNumber }) {
                 }
                 return prev + 1
             })
-        }, 50)
+        }, timerSpeed)
 
         return () => clearInterval(intervalId)
     }, [targetNumber])
