@@ -35,7 +35,7 @@
     --color-weather-start: #4cc9ff;
     --color-weather-mid: #2e9bff;
     --color-weather-end: #0088ff;
-    --animate-Rotate: Rotate 2.1s infinite linear;
+    --animate-Rotate: Rotate 2s infinite linear;
   }
 }
 @layer base {
@@ -202,18 +202,6 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
-  .-mr-2 {
-    margin-right: calc(var(--spacing) * -2);
-  }
-  .-mr-10 {
-    margin-right: calc(var(--spacing) * -10);
-  }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
-  .mr-10 {
-    margin-right: calc(var(--spacing) * 10);
-  }
   .line-clamp-3 {
     overflow: hidden;
     display: -webkit-box;
@@ -310,9 +298,6 @@
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
-  }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
   }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
@@ -411,6 +396,9 @@
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -419,6 +407,15 @@
   }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
+  }
+  .py-17 {
+    padding-block: calc(var(--spacing) * 17);
+  }
+  .py-18 {
+    padding-block: calc(var(--spacing) * 18);
+  }
+  .py-19 {
+    padding-block: calc(var(--spacing) * 19);
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
@@ -429,8 +426,14 @@
   .pt-15 {
     padding-top: calc(var(--spacing) * 15);
   }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
   }
   .text-justify {
     text-align: justify;
@@ -583,13 +586,13 @@
 }
 @keyframes Rotate {
   0% {
-    transform: translateY(3px);
+    transform: translateY(4px);
   }
   50% {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
   }
   100% {
-    transform: translateY(3px);
+    transform: translateY(4px);
   }
 }
 @layer properties {

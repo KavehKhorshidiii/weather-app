@@ -8,18 +8,18 @@
     --color-weather-mid: #2e9bff;
     --color-weather-end: #0088ff;
     /*  */
-    --animate-Rotate: Rotate 2.1s infinite linear;
+    --animate-Rotate: Rotate 2s infinite linear;
     @keyframes Rotate {
         0% {
-            transform: translateY(3px);
+            transform: translateY(4px);
         }
 
         50% {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
         }
 
         100% {
-            transform: translateY(3px);
+            transform: translateY(4px);
         }
     }
     /*  */

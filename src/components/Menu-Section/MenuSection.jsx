@@ -3,14 +3,14 @@ import { TiWeatherSnow } from "react-icons/ti"
 export default function MenuSection() {
     return (
         <div className=" text-amber-50  bg-black h-full">
-            <span className=" py-15 flex justify-center items-center">
+            <span className=" py-17 flex justify-center items-center">
                 <span className=" text-6xl font-bold bg-gradient-to-l text-transparent from-weather-start via-weather-mid to-weather-end bg-clip-text">MyWEATHER</span>
-                  <TiWeatherSnow className=" animate-Rotate text-weather-start  text-7xl"></TiWeatherSnow>
+                  <TiWeatherSnow className=" animate-Rotate text-weather-start text-7xl"></TiWeatherSnow>
             </span>
 
 
 
-            <span className=" py-10 flex flex-col">
+            <span className=" pb-10 flex flex-col">
                 <span className=" text-xl font-bold text-weather-end">Short Description</span>
                 <span className=" text-justify text-xl line-clamp-3 text-sky-100">With MyWEATHER, you can check live weather conditions for any city and get forecasts for upcoming days.</span>
             </span>
