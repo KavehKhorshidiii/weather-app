@@ -15,6 +15,7 @@ export default function Counter({ targetNumber , timerSpeed }) {
         }, timerSpeed)
 
         return () => clearInterval(intervalId)
+        
     }, [targetNumber])
 
     return <span>{number}</span>

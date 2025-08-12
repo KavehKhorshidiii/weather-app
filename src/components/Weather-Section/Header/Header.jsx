@@ -16,8 +16,15 @@ export default function Header({ isCoords }) {
     })
 
     return (
-        <div className="items-center flex justify-between">
-            <div className=" relative flex justify-center w-1/2 items-center gap-1 text-white">
+        <div className="items-center flex gap-20 justify-between">
+
+
+             <div className=" flex justify-center w-3/10 items-center gap-1 text-white">
+                <IoLocationSharp className="text-3xl"></IoLocationSharp>
+                <span className="text-3xl">{isLoading ? "loading..." : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
+            </div>
+
+            <div className=" relative flex justify-center w-7/10 items-center gap-1 text-white">
                 <input
                     placeholder="Enter your City Name"
                     value={cityName}
@@ -52,11 +59,6 @@ export default function Header({ isCoords }) {
                           ))
                         : null}
                 </div>
-            </div>
-
-            <div className=" flex justify-center items-center gap-1 text-white">
-                <IoLocationSharp className="text-3xl"></IoLocationSharp>
-                <span className="text-3xl">{isLoading ? "loading..." : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
         </div>
     )

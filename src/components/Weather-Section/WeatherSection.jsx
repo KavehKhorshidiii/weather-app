@@ -8,7 +8,6 @@ export default function WeatherSection() {
     const [coords, setCoords] = useState(null)
     const [weatherData, setWeatherData] = useState(null)
 
-
     const { data, isLoading } = useQuery({
         queryKey: ["weather", coords],
         queryFn: () => fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lon}&appid=635afb9504c0f920b54fd97746f11cf3&units=metric`).then((res) => res.json()),
@@ -16,9 +15,10 @@ export default function WeatherSection() {
     })
 
     useEffect(() => {
-        if (data) {setWeatherData(data)}
+        if (data) {
+            setWeatherData(data)
+        }
     }, [data])
-
 
     return (
         <div className="w-6/10 h-screen justify-between bg-black">

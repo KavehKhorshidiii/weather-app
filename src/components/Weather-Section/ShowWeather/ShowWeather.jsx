@@ -25,7 +25,6 @@ export default function ShowWeather({ DataWeather }) {
     return (
         <div className=" w-7/10 border-l-1 flex flex-col justify-center items-center border-white/80">
             <div className=" flex flex-col items-center">
-                {/* <span className=" text-white font-bold text-9xl">{Temp}</span> */}
                 <span className=" text-white font-bold text-9xl">{<Counter timerSpeed={50} targetNumber={Temp}></Counter>}</span>
 
                 {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}

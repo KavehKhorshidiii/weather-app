@@ -1,11 +1,21 @@
 import MenuSection from "./components/Menu-Section/MenuSection"
+import Menu from "./components/Menu/Menu"
 import WeatherSection from "./components/Weather-Section/WeatherSection"
 
 export default function App() {
-   return (
-      <div className="h-screen flex">
-         <MenuSection />
-         <WeatherSection />
-      </div>
-   )
+    return (
+        <div className="h-screen bg-black flex">
+
+            <div className="w-4/10 px-12 pt-2 overflow-auto ">
+                <div className=" sticky top-0 py-3 ">
+                    <Menu></Menu>
+                </div>
+                <div className="">
+                    <MenuSection />
+                </div>
+            </div>
+
+            <WeatherSection />
+        </div>
+    )
 }
