@@ -12,21 +12,21 @@ export default function Menu() {
             <div className=" flex justify-around w-full">
                 <div className="Home">
                     <Link to="/">
-                        <GoHomeFill className=" text-2xl"></GoHomeFill>
+                        <GoHomeFill className=" text-3xl"></GoHomeFill>
                     </Link>
                 </div>
                 <div className="profile">
                     <Link to="/profile">
-                        <FaUserAlt className=" text-xl"></FaUserAlt>
+                        <FaUserAlt className=" text-2xl"></FaUserAlt>
                     </Link>
                 </div>
                 <div className="Links">
                     <Link to="/links">
-                        <RiLinksLine className=" text-2xl"></RiLinksLine>
+                        <RiLinksLine className=" text-3xl"></RiLinksLine>
                     </Link>
                 </div>
                 <div className="DarkMode">
-                    <MdDarkMode className=" text-2xl"></MdDarkMode>
+                    <MdDarkMode className=" text-3xl"></MdDarkMode>
                 </div>
             </div>
             <Link to="/">
