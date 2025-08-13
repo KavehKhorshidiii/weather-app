@@ -9,7 +9,10 @@
       "Courier New", monospace;
     --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-sky-100: oklch(95.1% 0.026 236.824);
+    --color-pink-800: oklch(45.9% 0.187 3.815);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -214,6 +217,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -239,6 +245,9 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-1\/3 {
+    width: calc(1/3 * 100%);
+  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
@@ -263,6 +272,9 @@
   .w-7\/10 {
     width: calc(7/10 * 100%);
   }
+  .w-13 {
+    width: calc(var(--spacing) * 13);
+  }
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
@@ -280,6 +292,12 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-cols-subgrid {
+    grid-template-columns: subgrid;
   }
   .flex-col {
     flex-direction: column;
@@ -346,6 +364,15 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
   }
+  .border-amber-50 {
+    border-color: var(--color-amber-50);
+  }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
+  }
+  .border-amber-600 {
+    border-color: var(--color-amber-600);
+  }
   .border-black {
     border-color: var(--color-black);
   }
@@ -396,26 +423,14 @@
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .py-15 {
-    padding-block: calc(var(--spacing) * 15);
-  }
   .py-17 {
     padding-block: calc(var(--spacing) * 17);
-  }
-  .py-18 {
-    padding-block: calc(var(--spacing) * 18);
-  }
-  .py-19 {
-    padding-block: calc(var(--spacing) * 19);
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
@@ -426,17 +441,23 @@
   .pt-15 {
     padding-top: calc(var(--spacing) * 15);
   }
-  .pt-20 {
-    padding-top: calc(var(--spacing) * 20);
-  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
+  .text-center {
+    text-align: center;
+  }
+  .text-end {
+    text-align: end;
+  }
   .text-justify {
     text-align: justify;
+  }
+  .text-start {
+    text-align: start;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -469,6 +490,9 @@
   .text-amber-50 {
     color: var(--color-amber-50);
   }
+  .text-pink-800 {
+    color: var(--color-pink-800);
+  }
   .text-sky-100 {
     color: var(--color-sky-100);
   }
@@ -477,6 +501,9 @@
   }
   .text-weather-end {
     color: var(--color-weather-end);
+  }
+  .text-weather-mid {
+    color: var(--color-weather-mid);
   }
   .text-weather-start {
     color: var(--color-weather-start);

@@ -5,7 +5,7 @@ export default function home() {
   return (
      <div className=" text-amber-50  bg-black h-full">
                 <span className=" py-17 flex justify-center items-center">
-                    <span className=" text-6xl font-bold bg-gradient-to-l text-transparent from-weather-start via-weather-mid to-weather-end bg-clip-text">MyWEATHER</span>
+                    <span className=" text-6xl font-bold bg-gradient-to-l from-weather-start via-weather-mid to-weather-end bg-clip-text text-transparent">MyWEATHER</span>
                       <TiWeatherSnow className=" animate-Rotate text-weather-start text-7xl"></TiWeatherSnow>
                 </span>
     

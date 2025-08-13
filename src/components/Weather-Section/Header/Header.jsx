@@ -15,11 +15,23 @@ export default function Header({ isCoords }) {
         enabled: !!locationSearch,
     })
 
+
+    const localStorageCitiesData = (city, country, lat, lon) => {
+
+        let myLocalStorageCities = JSON.parse(localStorage.getItem("searchCities")) || []
+
+        const hasCity = myLocalStorageCities.some((item) => item.city === city)
+
+        if (!hasCity) {
+            console.log("no")
+            localStorage.setItem("searchCities", JSON.stringify([{ city: city, country: country, lat: lat, lon: lon }, ...myLocalStorageCities]))
+        }
+    }
+
+
     return (
         <div className="items-center flex gap-20 justify-between">
-
-
-             <div className=" flex justify-center w-3/10 items-center gap-1 text-white">
+            <div className=" flex justify-center w-3/10 items-center gap-1 text-white">
                 <IoLocationSharp className="text-3xl"></IoLocationSharp>
                 <span className="text-3xl">{isLoading ? "loading..." : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
@@ -51,6 +63,7 @@ export default function Header({ isCoords }) {
                                       setConfirmedCity({ city: item.name, country: item.country })
                                       setCityName("")
                                       isCoords({ lat: item.lat, lon: item.lon })
+                                      localStorageCitiesData(item.name, item.country, item.lat, item.lon)
                                   }}
                                   key={item.name}
                               >
