@@ -53,6 +53,7 @@ export default function Header({ isCoords }) {
                 >
                     <IoSearch></IoSearch>
                 </button>
+                
                 <div className={`${CityNameBoxVisible ? "hidden" : "block"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
                     {data
                         ? data.map((item) => (
