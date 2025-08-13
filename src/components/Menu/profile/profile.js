@@ -15,9 +15,8 @@ export default function profile() {
                     <span className=" w-1/3 text-center">Country</span>
                 </div>
 
-                {
-                CitiesHistory.map((item) => (
-                    <div className=" py-3 px-4 border-white my-2">
+                {CitiesHistory.map((item) => (
+                    <div key={item.city} className=" py-3 px-4 border-white my-2">
                         <div className="text-white flex justify-between">
                             <span className=" text-start w-1/3">{item.city}</span>
                             <span className=" text-center w-1/3">{item.country}</span>
@@ -30,17 +29,6 @@ export default function profile() {
                     </div>
                 ))}
 
-                {/* <div className=" py-3 px-4 border-white my-2">
-                    <div className="text-white flex justify-between">
-                        <span className=" text-start w-1/3">Qom</span>
-                        <span className=" text-center w-1/3">IR</span>
-                        <span className=" text-end w-1/3 text-pink-800">
-                            <button>
-                                <ImBin></ImBin>
-                            </button>
-                        </span>
-                    </div>
-                </div> */}
             </div>
         </div>
     )
