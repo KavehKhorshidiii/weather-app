@@ -16,6 +16,7 @@ export default function profile() {
                     </tr>
                 </thead>
 
+
                 <tbody className=" text-white w-full ">
                     <tr>
                         <td className=" text-start w-1/3">Qom</td>
