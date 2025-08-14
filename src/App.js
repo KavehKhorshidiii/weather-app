@@ -6,7 +6,7 @@ import MyContextProvider from "./myContext/myContextProvider"
 export default function App() {
     return (
         <MyContextProvider>
-            <div className="h-screen bg-black flex">
+            <div className="h-screen bg-white dark:bg-black flex">
                 <div className="w-4/10 px-12 pt-2 overflow-auto ">
                     <div className=" sticky top-0 py-3 ">
                         <Menu></Menu>

@@ -1,32 +1,44 @@
 import React from "react"
 import { MdDarkMode } from "react-icons/md"
 import { TiWeatherSnow } from "react-icons/ti"
-import { FaUserAlt } from "react-icons/fa"
 import { RiLinksLine } from "react-icons/ri"
 import { GoHomeFill } from "react-icons/go"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import { FaHistory } from "react-icons/fa";
+import { useState } from "react"
+
+
 
 export default function Menu() {
+
+    //const [theme, setTheme] = useState("dark");
+
+    const DarkMode = () => {
+        document.documentElement.classList.toggle('dark')
+    }
+
+
+
     return (
         <div className="flex items-center border-2 justify-between p-2 rounded-4xl text-amber-50">
             <div className=" flex justify-around w-full">
-                <div className="Home">
-                    <Link to="/">
+                <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/">
+                    <div className="Home">
                         <GoHomeFill className=" text-3xl"></GoHomeFill>
-                    </Link>
-                </div>
-                <div className="profile">
-                    <Link to="/profile">
-                        <FaUserAlt className=" text-2xl"></FaUserAlt>
-                    </Link>
-                </div>
-                <div className="Links">
-                    <Link to="/links">
+                    </div>
+                </NavLink>
+                <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end flex justify-center items-center" : 'flex justify-center items-center')} to="/profile">
+                    <div className="profile">
+                        <FaHistory className="text-2xl"></FaHistory>
+                    </div>
+                </NavLink>
+                <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/links">
+                    <div className="Links">
                         <RiLinksLine className=" text-3xl"></RiLinksLine>
-                    </Link>
-                </div>
+                    </div>
+                </NavLink>
                 <div className="DarkMode">
-                    <MdDarkMode className=" text-3xl"></MdDarkMode>
+                    <MdDarkMode onClick={()=>DarkMode()} className=" text-3xl"></MdDarkMode>
                 </div>
             </div>
             <Link to="/">
