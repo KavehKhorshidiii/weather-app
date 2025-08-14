@@ -11,6 +11,8 @@ export default function ShowWeather({ DataWeather }) {
     useEffect(() => {
         if (iconCode) {
             setIconUrl(`https://openweathermap.org/img/wn/${iconCode}@2x.png`)
+        }else{
+            setIconUrl(null)
         }
     }, [iconCode])
 
@@ -19,6 +21,11 @@ export default function ShowWeather({ DataWeather }) {
             setTemp(Math.floor(DataWeather.main.temp))
             setWeatherConditions(DataWeather.weather[0].main)
             setIconCode(DataWeather.weather[0].icon)
+        } else {
+            setTemp(null)
+            setWeatherConditions(null)
+            setIconCode(null)
+            setIconCode(null)
         }
     }, [DataWeather])
 
@@ -28,6 +35,7 @@ export default function ShowWeather({ DataWeather }) {
                 <span className=" text-white font-bold text-9xl">{<Counter timerSpeed={50} targetNumber={Temp}></Counter>}</span>
 
                 {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
+
                 <span className=" text-white flex items-center text-3xl">
                     {WeatherConditions}
                     {iconUrl ? (

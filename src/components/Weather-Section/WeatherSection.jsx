@@ -4,9 +4,20 @@ import DetailsWeather from "./DetailsWeather/DetailsWeather"
 import { useEffect, useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 
+
+import { useContext } from "react"  //
+import { MyContext } from "../../myContext/myContextProvider"
+
+
 export default function WeatherSection() {
-    const [coords, setCoords] = useState(null) // this state
+
+    const {coords, setCoords} = useContext(MyContext) 
     const [weatherData, setWeatherData] = useState(null)
+
+    useEffect(()=>{
+        console.log(coords)
+    },[coords])
+
 
     const { data, isLoading } = useQuery({
         queryKey: ["weather", coords],
@@ -17,14 +28,17 @@ export default function WeatherSection() {
     useEffect(() => {
         if (data) {
             setWeatherData(data)
+        }else{
+            setWeatherData(null)
         }
+        console.log(data)
     }, [data])
 
     return (
         <div className="w-6/10 h-screen justify-between bg-black">
             <div className=" p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-l-weather flex flex-col h-full">
                 <div className=" ">
-                    <Header isCoords={setCoords}></Header>
+                    <Header></Header> 
                 </div>
                 <div className=" h-full flex py-20 ">
                     <DetailsWeather DataWeather={weatherData}></DetailsWeather>

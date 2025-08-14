@@ -14,6 +14,10 @@ export default function DetailsWeather({ DataWeather }) {
             setWindSpeed(Math.floor(DataWeather?.wind?.speed))
             setHumidity(DataWeather.main.humidity)
             setCloudiness(DataWeather.clouds.all)
+        }else{
+            setWindSpeed(null)
+            setHumidity(null)
+            setCloudiness(null)
         }
     }, [DataWeather])
 

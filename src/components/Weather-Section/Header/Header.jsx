@@ -3,12 +3,19 @@ import { IoLocationSharp } from "react-icons/io5"
 import { IoSearch } from "react-icons/io5"
 import { useQuery } from "@tanstack/react-query"
 
-export default function Header({ isCoords }) {
+import { useContext } from "react"
+import { MyContext } from "../../../myContext/myContextProvider"
+
+export default function Header() {
+
+    const {setCoords , ConfirmedCity , setConfirmedCity} = useContext(MyContext) // this state
+
+
     const [cityName, setCityName] = useState("")
     const [CityNameBoxVisible, setCityNameBoxVisible] = useState(true)
-
-    const [ConfirmedCity, setConfirmedCity] = useState()
     const [locationSearch, setLocationSearch] = useState()
+
+
 
     const { isLoading, data } = useQuery({
         queryKey: ["locationName", locationSearch],
@@ -24,7 +31,6 @@ export default function Header({ isCoords }) {
         const hasCity = myLocalStorageCities.some((item) => item.city === city)
 
         if (!hasCity) {
-            console.log("no")
             localStorage.setItem("searchCities", JSON.stringify([{ city: city, country: country, lat: lat, lon: lon }, ...myLocalStorageCities]))
         }
     }
@@ -62,8 +68,10 @@ export default function Header({ isCoords }) {
                                   className=""
                                   onClick={() => {
                                       setCityNameBoxVisible(true)
+
                                       setConfirmedCity({ city: item.name, country: item.country })
-                                      isCoords({ lat: item.lat, lon: item.lon })
+                                      
+                                      setCoords({ lat: item.lat, lon: item.lon })
                                       setCityName("")
                                       localStorageCitiesData(item.name, item.country, item.lat, item.lon)
                                   }}

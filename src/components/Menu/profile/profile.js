@@ -1,10 +1,30 @@
-import React from "react"
 import { ImBin } from "react-icons/im"
+import { useContext, useEffect } from "react"
+import { MyContext } from "../../../myContext/myContextProvider"
+import { useState } from "react"
 
-export default function profile() {
+export default function Profile() {
+    const { coords, setCoords, setConfirmedCity } = useContext(MyContext) // this state
 
-  
-    const CitiesHistory = JSON.parse(localStorage.getItem("searchCities")) || []
+    const [CitiesHistory, setCitiesHistory] = useState([])
+
+    useEffect(() => {
+        setCitiesHistory(JSON.parse(localStorage.getItem("searchCities")) || [])
+    }, [coords])
+
+    const DeleteFun = (cityName) => {
+        let filterHistory = CitiesHistory.filter((item) => item.city !== cityName)
+        setCitiesHistory(filterHistory)
+        localStorage.setItem("searchCities", JSON.stringify(filterHistory))
+        console.log("object")
+        setCoords(null)
+        setConfirmedCity(null)
+    }
+
+    const SendDataWeather = (item) => {
+        setCoords({ lat: item.lat, lon: item.lon })
+        setConfirmedCity({ city: item.city, country:item.country })
+    }
 
     return (
         <div className="">
@@ -17,19 +37,19 @@ export default function profile() {
                 </div>
 
                 {CitiesHistory.map((item) => (
-                    <div key={item.city} className=" py-3 px-4 border-white my-2">
+                    <div key={item.city} className=" hover:border-2 rounded-2xl py-3 px-4 border-white my-2">
                         <div className="text-white flex justify-between">
                             <span className=" text-start w-1/3">{item.city}</span>
                             <span className=" text-center w-1/3">{item.country}</span>
                             <span className=" text-end w-1/3 text-pink-800">
-                                <button>
+                                <button onClick={() => DeleteFun(item.city)}>
                                     <ImBin></ImBin>
                                 </button>
                             </span>
+                            <button onClick={() => SendDataWeather(item)}>show</button>
                         </div>
                     </div>
                 ))}
-
             </div>
         </div>
     )
