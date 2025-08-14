@@ -2,6 +2,7 @@ import React from "react"
 import { ImBin } from "react-icons/im"
 
 export default function profile() {
+
   
     const CitiesHistory = JSON.parse(localStorage.getItem("searchCities")) || []
 

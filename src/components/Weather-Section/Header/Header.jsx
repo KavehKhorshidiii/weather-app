@@ -5,9 +5,10 @@ import { useQuery } from "@tanstack/react-query"
 
 export default function Header({ isCoords }) {
     const [cityName, setCityName] = useState("")
-    const [locationSearch, setLocationSearch] = useState()
     const [CityNameBoxVisible, setCityNameBoxVisible] = useState(true)
+
     const [ConfirmedCity, setConfirmedCity] = useState()
+    const [locationSearch, setLocationSearch] = useState()
 
     const { isLoading, data } = useQuery({
         queryKey: ["locationName", locationSearch],
@@ -53,7 +54,7 @@ export default function Header({ isCoords }) {
                 >
                     <IoSearch></IoSearch>
                 </button>
-                
+
                 <div className={`${CityNameBoxVisible ? "hidden" : "block"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
                     {data
                         ? data.map((item) => (
@@ -62,8 +63,8 @@ export default function Header({ isCoords }) {
                                   onClick={() => {
                                       setCityNameBoxVisible(true)
                                       setConfirmedCity({ city: item.name, country: item.country })
-                                      setCityName("")
                                       isCoords({ lat: item.lat, lon: item.lon })
+                                      setCityName("")
                                       localStorageCitiesData(item.name, item.country, item.lat, item.lon)
                                   }}
                                   key={item.name}

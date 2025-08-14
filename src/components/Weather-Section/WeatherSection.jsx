@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 
 export default function WeatherSection() {
-    const [coords, setCoords] = useState(null)
+    const [coords, setCoords] = useState(null) // this state
     const [weatherData, setWeatherData] = useState(null)
 
     const { data, isLoading } = useQuery({
