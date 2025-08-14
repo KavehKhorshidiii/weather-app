@@ -30,7 +30,7 @@ export default function WeatherSection() {
     }, [data])
 
     return (
-        <div className="w-6/10 h-screen justify-between bg-black">
+        <div className="w-6/10 h-screen justify-between bg-white dark:bg-black">
             <div className=" p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-l-weather flex flex-col h-full">
                 <div className=" ">
                     <Header></Header> 
