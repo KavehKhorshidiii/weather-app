@@ -11,10 +11,28 @@ import { useState } from "react"
 
 export default function Menu() {
 
-    //const [theme, setTheme] = useState("dark");
+    if(localStorage.getItem("lightMode")){
 
-    const DarkMode = () => {
-        document.documentElement.classList.toggle('dark')
+        document.documentElement.classList.add(localStorage.getItem("lightMode"))
+        document.documentElement.classList.remove(localStorage.getItem("lightMode") === "light" ? "dark" : "light")
+
+    }
+    
+
+    const LightMode = () => {
+
+        if(document.documentElement.classList.value === "dark"){
+            document.documentElement.classList.add('light')
+            document.documentElement.classList.remove('dark')
+    
+            localStorage.setItem("lightMode" , "light")
+        }else{
+            document.documentElement.classList.add('dark')
+            document.documentElement.classList.remove('light')
+
+            localStorage.setItem("lightMode" , "dark")
+        }
+
     }
 
 
@@ -38,7 +56,7 @@ export default function Menu() {
                     </div>
                 </NavLink>
                 <div className="DarkMode">
-                    <MdDarkMode onClick={()=>DarkMode()} className=" text-3xl"></MdDarkMode>
+                    <MdDarkMode onClick={LightMode} className=" text-3xl"></MdDarkMode>
                 </div>
             </div>
             <Link to="/">

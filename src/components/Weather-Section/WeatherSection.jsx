@@ -14,10 +14,6 @@ export default function WeatherSection() {
     const {coords, setCoords} = useContext(MyContext) 
     const [weatherData, setWeatherData] = useState(null)
 
-    useEffect(()=>{
-        console.log(coords)
-    },[coords])
-
 
     const { data, isLoading } = useQuery({
         queryKey: ["weather", coords],
@@ -31,7 +27,6 @@ export default function WeatherSection() {
         }else{
             setWeatherData(null)
         }
-        console.log(data)
     }, [data])
 
     return (
