@@ -34,7 +34,7 @@ export default function Menu() {
 
 
     return (
-        <div className="flex items-center border-2 justify-between p-2 rounded-4xl text-amber-50">
+        <div className="flex items-center border-2 justify-between p-2 rounded-4xl text-black dark:text-amber-50">
             <div className=" flex justify-around w-full">
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/">
                     <div className="Home">

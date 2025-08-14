@@ -546,6 +546,11 @@
       background-color: var(--color-black);
     }
   }
+  .dark\:text-amber-50 {
+    &:where(.dark, .dark *) {
+      color: var(--color-amber-50);
+    }
+  }
   .dark\:text-sky-100 {
     &:where(.dark, .dark *) {
       color: var(--color-sky-100);
