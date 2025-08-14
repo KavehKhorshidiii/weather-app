@@ -12,10 +12,8 @@ import { useState } from "react"
 export default function Menu() {
 
     if(localStorage.getItem("lightMode")){
-
         document.documentElement.classList.add(localStorage.getItem("lightMode"))
         document.documentElement.classList.remove(localStorage.getItem("lightMode") === "light" ? "dark" : "light")
-
     }
     
 
@@ -24,12 +22,10 @@ export default function Menu() {
         if(document.documentElement.classList.value === "dark"){
             document.documentElement.classList.add('light')
             document.documentElement.classList.remove('dark')
-    
             localStorage.setItem("lightMode" , "light")
         }else{
             document.documentElement.classList.add('dark')
             document.documentElement.classList.remove('light')
-
             localStorage.setItem("lightMode" , "dark")
         }
 
