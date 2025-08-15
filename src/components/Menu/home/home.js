@@ -12,12 +12,12 @@ export default function home() {
     
     
                 <span className=" pb-9 flex flex-col">
-                    <span className=" text-xl font-bold text-weather-end">Short Description</span>
+                    <span className=" text-2xl font-bold text-weather-end">Short Description</span>
                     <span className=" text-justify text-xl line-clamp-3 text-black dark:text-sky-100">With MyWEATHER, you can check live weather conditions for any city and get forecasts for upcoming days.</span>
                 </span>
     
                 <span className=" py-9 flex flex-col">
-                    <span className=" text-xl font-bold text-weather-end">Quick Guide</span>
+                    <span className=" text-2xl font-bold text-weather-end">Quick Guide</span>
                     <span className=" flex flex-col text-justify text-xl line-clamp-3 text-black dark:text-sky-100">
                         <span>1. Enter your city name in the search bar above.</span>
                         <span>2. Click the search icon.</span>
@@ -26,7 +26,7 @@ export default function home() {
                 </span>
     
                 <span className="py-9 flex flex-col">
-                    <span className=" text-xl font-bold text-weather-end">Key Features</span>
+                    <span className=" text-2xl font-bold text-weather-end">Key Features</span>
                     <span className=" flex flex-col text-justify text-xl line-clamp-3 text-black dark:text-sky-100">
                         <span>. Accurate Temperature</span>
                         <span>. Wind Speed</span>
