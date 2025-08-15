@@ -8,10 +8,9 @@ import Spinner from "../../../spinner/spinner"
 
 export default function Header() {
     const { setCoords, ConfirmedCity, setConfirmedCity } = useContext(MyContext) // this state
-
     const [cityName, setCityName] = useState("")
     const [CityNameBoxVisible, setCityNameBoxVisible] = useState(true)
-    const [locationSearch, setLocationSearch] = useState()
+    const [locationSearch, setLocationSearch] = useState(null)
 
     const { isLoading, data } = useQuery({
         queryKey: ["locationName", locationSearch],
@@ -29,6 +28,13 @@ export default function Header() {
         }
     }
 
+    const onkeydownFunc = (e) => {
+        if (e.code === "Enter") {
+            setLocationSearch(e.target.value)
+            setCityNameBoxVisible(false)
+        }
+    }
+
     return (
         <div className="items-center flex gap-20 justify-between">
             <div className=" flex justify-center w-3/10 items-center gap-1 text-white">
@@ -38,6 +44,7 @@ export default function Header() {
 
             <div className=" relative flex justify-center w-7/10 items-center gap-1 text-white">
                 <input
+                    onKeyDown={onkeydownFunc} //
                     placeholder="Enter your City Name"
                     value={cityName}
                     onChange={(e) => setCityName(e.target.value)}
