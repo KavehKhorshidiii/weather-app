@@ -9,8 +9,8 @@ export default function links() {
             <div className="aboutMe">
                 <div className=" flex text-2xl font-bold text-weather-end items-center">Hi! I’m Kaveh Khorshidi</div>
                 <div className="flex flex-col">
-                    <span className=" text-white font-bold">Frontend Developer</span>
-                    <span className=" text-white font-bold">"I hope you enjoy exploring this website and have a great experience"</span>
+                    <span className=" dark:text-white text-black font-bold">Frontend Developer</span>
+                    <span className=" dark:text-white text-black font-bold">"I hope you enjoy exploring this website and have a great experience"</span>
                 </div>
             </div>
 
@@ -18,23 +18,23 @@ export default function links() {
                 <div className=" flex text-2xl font-bold text-weather-end items-center">Let’s Connect</div>
 
                 <div className=" group w-fit ">
-                    <div className=" group-hover:translate-x-5 text-xl flex items-center gap-2">
-                        <FaGithubAlt className=" text-white"></FaGithubAlt>
-                        <span className=" text-white font-bold">GitHub</span>
+                    <div className=" group-hover:translate-x-5  dark:text-white text-black text-xl flex items-center gap-2">
+                        <FaGithubAlt className=" "></FaGithubAlt>
+                        <span className="  font-bold">GitHub</span>
                     </div>
                 </div>
 
                 <div className=" group w-fit ">
-                    <div className=" flex group-hover:translate-x-5 text-xl items-center gap-2">
-                        <FaTelegramPlane className=" text-white"></FaTelegramPlane>
-                        <span className=" text-white font-bold">Telegram</span>
+                    <div className=" flex group-hover:translate-x-5  dark:text-white text-black text-xl items-center gap-2">
+                        <FaTelegramPlane className=""></FaTelegramPlane>
+                        <span className=" font-bold">Telegram</span>
                     </div>
                 </div>
 
                 <div className=" group w-fit ">
-                    <div className="group-hover:translate-x-5 text-xl flex items-center gap-2">
-                        <SiGmail className=" text-white"></SiGmail>
-                        <span className=" text-white font-bold">Gmail</span>
+                    <div className="group-hover:translate-x-5  dark:text-white text-black text-xl flex items-center gap-2">
+                        <SiGmail className=" "></SiGmail>
+                        <span className=" font-bold">Gmail</span>
                     </div>
                 </div>
             </div>
