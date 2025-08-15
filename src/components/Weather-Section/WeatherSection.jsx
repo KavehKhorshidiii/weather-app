@@ -13,7 +13,8 @@ export default function WeatherSection() {
 
     const {coords, setCoords} = useContext(MyContext) 
     const [weatherData, setWeatherData] = useState(null)
-
+    const [loadingWeatherData, setLoadingWeatherData] = useState(false)
+    
 
     const { data, isLoading } = useQuery({
         queryKey: ["weather", coords],
@@ -29,6 +30,15 @@ export default function WeatherSection() {
         }
     }, [data])
 
+    useEffect(() => {
+        if (isLoading) {
+            setLoadingWeatherData(isLoading)
+        }else{
+            setLoadingWeatherData(false)
+        }
+    }, [isLoading])
+
+
     return (
         <div className="w-6/10 h-screen justify-between bg-white dark:bg-black">
             <div className=" p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-l-weather flex flex-col h-full">
@@ -36,8 +46,8 @@ export default function WeatherSection() {
                     <Header></Header> 
                 </div>
                 <div className=" h-full flex py-20 ">
-                    <DetailsWeather DataWeather={weatherData}></DetailsWeather>
-                    <ShowWeather DataWeather={weatherData}></ShowWeather>
+                    <DetailsWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></DetailsWeather>
+                    <ShowWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></ShowWeather>
                 </div>
             </div>
         </div>

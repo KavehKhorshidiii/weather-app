@@ -4,8 +4,7 @@ import { IoSearch } from "react-icons/io5"
 import { useQuery } from "@tanstack/react-query"
 import { useContext } from "react"
 import { MyContext } from "../../../myContext/myContextProvider"
-
-
+import Spinner from "../../../spinner/spinner"
 
 export default function Header() {
     const { setCoords, ConfirmedCity, setConfirmedCity } = useContext(MyContext) // this state
@@ -34,7 +33,7 @@ export default function Header() {
         <div className="items-center flex gap-20 justify-between">
             <div className=" flex justify-center w-3/10 items-center gap-1 text-white">
                 <IoLocationSharp className="text-3xl"></IoLocationSharp>
-                <span className="text-3xl">{isLoading ? "loading..." : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
+                <span className="text-3xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
 
             <div className=" relative flex justify-center w-7/10 items-center gap-1 text-white">
@@ -59,7 +58,7 @@ export default function Header() {
                     {data
                         ? data.map((item) => (
                               <span
-                                  className=""
+                                  key={item.lat}
                                   onClick={() => {
                                       setCityNameBoxVisible(true)
 
@@ -69,7 +68,6 @@ export default function Header() {
                                       setCityName("")
                                       localStorageCitiesData(item.name, item.country, item.lat, item.lon)
                                   }}
-                                  key={item.name}
                               >
                                   {item.name} - {item.country}
                               </span>

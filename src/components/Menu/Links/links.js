@@ -4,7 +4,7 @@ import { SiGmail } from "react-icons/si"
 
 export default function links() {
     return (
-        <div className=" space-y-10 mt-10">
+        <div className=" space-y-15 mt-15">
            
             <div className="aboutMe">
                 <div className=" flex text-2xl font-bold text-weather-end items-center">Hi! I’m Kaveh Khorshidi</div>

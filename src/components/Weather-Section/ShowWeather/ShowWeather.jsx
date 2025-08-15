@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { IoSearch } from "react-icons/io5"
 import Counter from "../../../hooks/Counter"
+import Spinner from "../../../spinner/spinner"
 
-export default function ShowWeather({ DataWeather }) {
+export default function ShowWeather({ DataWeather, loadingWeatherData }) {
     const [Temp, setTemp] = useState(null)
     const [WeatherConditions, setWeatherConditions] = useState(null)
     const [iconCode, setIconCode] = useState(null)
@@ -11,7 +12,7 @@ export default function ShowWeather({ DataWeather }) {
     useEffect(() => {
         if (iconCode) {
             setIconUrl(`https://openweathermap.org/img/wn/${iconCode}@2x.png`)
-        }else{
+        } else {
             setIconUrl(null)
         }
     }, [iconCode])
@@ -25,7 +26,6 @@ export default function ShowWeather({ DataWeather }) {
             setTemp(null)
             setWeatherConditions(null)
             setIconCode(null)
-            setIconCode(null)
         }
     }, [DataWeather])
 
@@ -34,7 +34,29 @@ export default function ShowWeather({ DataWeather }) {
             <div className=" flex flex-col items-center">
                 <span className=" text-white font-bold text-9xl">{<Counter timerSpeed={50} targetNumber={Temp}></Counter>}</span>
 
-                {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
+                {loadingWeatherData ? (
+                    <Spinner></Spinner>
+                ) : (
+                    <>
+                        {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
+
+                        <span className=" text-white flex items-center text-3xl">
+                            {WeatherConditions}
+                            {iconUrl ? (
+                                <img className="size-20" src={iconUrl} alt="weather-img" />
+                            ) : (
+                                <div className=" flex flex-col justify-center items-center">
+                                    <span className=" font-bold text-7xl">Welcome</span>
+                                    <span className=" flex justify-center items-center text-xl">
+                                        Enter your city name please<IoSearch></IoSearch>
+                                    </span>
+                                </div>
+                            )}
+                        </span>
+                    </>
+                )}
+
+                {/* {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
 
                 <span className=" text-white flex items-center text-3xl">
                     {WeatherConditions}
@@ -48,7 +70,7 @@ export default function ShowWeather({ DataWeather }) {
                             </span>
                         </div>
                     )}
-                </span>
+                </span> */}
             </div>
         </div>
     )
