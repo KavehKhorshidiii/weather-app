@@ -36,13 +36,13 @@ export default function Header() {
     }
 
     return (
-        <div className="items-center flex gap-20 justify-between">
-            <div className=" flex justify-center w-3/10 items-center gap-1 text-white">
+        <div className="items-center flex  justify-between">
+            <div className="w-3/10 flex justify-center  items-center gap-1 text-white">
                 <IoLocationSharp className="text-3xl"></IoLocationSharp>
                 <span className="text-3xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
 
-            <div className=" relative flex justify-center w-7/10 items-center gap-1 text-white">
+            <div className="w-7/10 relative flex justify-center items-center gap-1 text-white">
                 <input
                     onKeyDown={onkeydownFunc} //
                     placeholder="Enter your City Name"

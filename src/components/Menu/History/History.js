@@ -44,10 +44,10 @@ export default function History() {
                             <span className=" text-black dark:text-white text-center w-1/3">{item.country}</span>
                             <span className=" text-2xl text-end w-1/3">
                                 <button className=" mr-3 rounded-full" onClick={() => SendDataWeather(item)}>
-                                    <FaEye className=" text-weather-end"></FaEye>
+                                    <FaEye className="hover:scale-150 text-weather-end"></FaEye>
                                 </button>
                                 <button onClick={() => DeleteFun(item.city)}>
-                                    <ImBin className=" text-pink-800"></ImBin>
+                                    <ImBin className=" hover:scale-150 text-red-700"></ImBin>
                                 </button>
                             </span>
                         </div>
