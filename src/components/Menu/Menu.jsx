@@ -1,36 +1,36 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { MdDarkMode } from "react-icons/md"
 import { TiWeatherSnow } from "react-icons/ti"
 import { RiLinksLine } from "react-icons/ri"
 import { GoHomeFill } from "react-icons/go"
 import { Link, NavLink } from "react-router-dom"
-import { FaHistory } from "react-icons/fa";
-
-
+import { FaHistory } from "react-icons/fa"
 
 export default function Menu() {
+    const [darkModeStatus, setDarkModeStatus] = useState(null)
 
-    if(localStorage.getItem("lightMode")){
+    useEffect(() => {
+        setDarkModeStatus(document.documentElement.classList.value)
+    }, [])
+
+    if (localStorage.getItem("lightMode")) {
         document.documentElement.classList.add(localStorage.getItem("lightMode"))
         document.documentElement.classList.remove(localStorage.getItem("lightMode") === "light" ? "dark" : "light")
     }
-    
 
     const LightMode = () => {
-
-        if(document.documentElement.classList.value === "dark"){
-            document.documentElement.classList.add('light')
-            document.documentElement.classList.remove('dark')
-            localStorage.setItem("lightMode" , "light")
-        }else{
-            document.documentElement.classList.add('dark')
-            document.documentElement.classList.remove('light')
-            localStorage.setItem("lightMode" , "dark")
+        if (document.documentElement.classList.value === "dark") {
+            document.documentElement.classList.add("light")
+            document.documentElement.classList.remove("dark")
+            localStorage.setItem("lightMode", "light")
+        } else {
+            document.documentElement.classList.add("dark")
+            document.documentElement.classList.remove("light")
+            localStorage.setItem("lightMode", "dark")
         }
 
+        setDarkModeStatus(document.documentElement.classList.value)
     }
-
-
 
     return (
         <div className="flex items-center border-2 justify-between p-2 rounded-4xl text-black dark:text-amber-50">
@@ -40,7 +40,7 @@ export default function Menu() {
                         <GoHomeFill className=" hover:text-weather-mid text-3xl"></GoHomeFill>
                     </div>
                 </NavLink>
-                <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end flex justify-center items-center" : 'flex justify-center items-center')} to="/profile">
+                <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end flex justify-center items-center" : "flex justify-center items-center")} to="/profile">
                     <div className="profile">
                         <FaHistory className="hover:text-weather-mid text-2xl"></FaHistory>
                     </div>
@@ -51,7 +51,7 @@ export default function Menu() {
                     </div>
                 </NavLink>
                 <div className="DarkMode">
-                    <MdDarkMode onClick={LightMode} className="hover:text-weather-mid text-3xl"></MdDarkMode>
+                    <MdDarkMode onClick={LightMode} className={`${darkModeStatus === "dark" ? "text-amber-300" : null} text-3xl`}></MdDarkMode>
                 </div>
             </div>
             <Link to="/">
