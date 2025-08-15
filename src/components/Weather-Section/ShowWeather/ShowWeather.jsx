@@ -56,21 +56,7 @@ export default function ShowWeather({ DataWeather, loadingWeatherData }) {
                     </>
                 )}
 
-                {/* {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
-
-                <span className=" text-white flex items-center text-3xl">
-                    {WeatherConditions}
-                    {iconUrl ? (
-                        <img className="size-20" src={iconUrl} alt="weather-img" />
-                    ) : (
-                        <div className=" flex flex-col justify-center items-center">
-                            <span className=" font-bold text-7xl">Welcome</span>
-                            <span className=" flex justify-center items-center text-xl">
-                                Enter your city name please<IoSearch></IoSearch>
-                            </span>
-                        </div>
-                    )}
-                </span> */}
+                
             </div>
         </div>
     )
