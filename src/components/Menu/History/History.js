@@ -4,7 +4,7 @@ import { MyContext } from "../../../myContext/myContextProvider"
 import { useState } from "react"
 import { FaEye } from "react-icons/fa6"
 
-export default function Profile() {
+export default function History() {
     const { coords, setCoords, setConfirmedCity } = useContext(MyContext) // this state
 
     const [CitiesHistory, setCitiesHistory] = useState([])
@@ -40,8 +40,8 @@ export default function Profile() {
                 {CitiesHistory.map((item) => (
                     <div key={item.city} className=" rounded-2xl py-3 px-4 border-white mt-2">
                         <div className="text-white flex justify-between">
-                            <span className=" text-start w-1/3">{item.city}</span>
-                            <span className=" text-center w-1/3">{item.country}</span>
+                            <span className=" text-black dark:text-white text-start w-1/3">{item.city}</span>
+                            <span className=" text-black dark:text-white text-center w-1/3">{item.country}</span>
                             <span className=" text-2xl text-end w-1/3">
                                 <button className=" mr-3 rounded-full" onClick={() => SendDataWeather(item)}>
                                     <FaEye className=" text-weather-end"></FaEye>

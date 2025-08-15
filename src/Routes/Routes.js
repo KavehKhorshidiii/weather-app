@@ -1,5 +1,5 @@
 import Links from "../components/Menu/Links/links"
-import Profile from "../components/Menu/profile/profile"
+import Profile from "../components/Menu/History/History"
 import Home from "../components/Menu/home/home"
 
 export const Routes = [

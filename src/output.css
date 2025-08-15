@@ -430,6 +430,12 @@
   .py-9 {
     padding-block: calc(var(--spacing) * 9);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
   }
@@ -441,6 +447,9 @@
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -535,6 +544,20 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .hover\:text-weather-mid {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-weather-mid);
+      }
+    }
+  }
+  .hover\:text-weather-start {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-weather-start);
+      }
+    }
+  }
   .focus\:border-4 {
     &:focus {
       border-style: var(--tw-border-style);
@@ -554,6 +577,11 @@
   .dark\:text-sky-100 {
     &:where(.dark, .dark *) {
       color: var(--color-sky-100);
+    }
+  }
+  .dark\:text-white {
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
     }
   }
 }

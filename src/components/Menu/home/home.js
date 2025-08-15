@@ -4,7 +4,7 @@ import { TiWeatherSnow } from "react-icons/ti"
 export default function home() {
   return (
      <div className=" text-amber-50 bg-white dark:bg-black h-full">
-                <span className=" py-14 flex justify-center items-center">
+                <span className=" py-10 flex justify-center items-center">
                     <span className=" text-6xl font-bold bg-gradient-to-l from-weather-start via-weather-mid to-weather-end bg-clip-text text-transparent">MyWEATHER</span>
                       <TiWeatherSnow className=" animate-Rotate text-weather-start text-7xl"></TiWeatherSnow>
                 </span>
@@ -36,7 +36,7 @@ export default function home() {
                     </span>
                 </span>
     
-                <div className="flex  pt-10 justify-center">
+                <div className="flex  pt-8 justify-center">
                     <span className=" text-md font-bold text-weather-end">"AFTER EVERY STORM , THE SKY TURNS BLUE AGAIN"</span>
                 </div>
             </div>

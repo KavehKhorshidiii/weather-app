@@ -5,7 +5,6 @@ import { RiLinksLine } from "react-icons/ri"
 import { GoHomeFill } from "react-icons/go"
 import { Link, NavLink } from "react-router-dom"
 import { FaHistory } from "react-icons/fa";
-import { useState } from "react"
 
 
 
@@ -38,21 +37,21 @@ export default function Menu() {
             <div className=" flex justify-around w-full">
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/">
                     <div className="Home">
-                        <GoHomeFill className=" text-3xl"></GoHomeFill>
+                        <GoHomeFill className=" hover:text-weather-mid text-3xl"></GoHomeFill>
                     </div>
                 </NavLink>
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end flex justify-center items-center" : 'flex justify-center items-center')} to="/profile">
                     <div className="profile">
-                        <FaHistory className="text-2xl"></FaHistory>
+                        <FaHistory className="hover:text-weather-mid text-2xl"></FaHistory>
                     </div>
                 </NavLink>
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/links">
                     <div className="Links">
-                        <RiLinksLine className=" text-3xl"></RiLinksLine>
+                        <RiLinksLine className="hover:text-weather-mid text-3xl"></RiLinksLine>
                     </div>
                 </NavLink>
                 <div className="DarkMode">
-                    <MdDarkMode onClick={LightMode} className=" text-3xl"></MdDarkMode>
+                    <MdDarkMode onClick={LightMode} className="hover:text-weather-mid text-3xl"></MdDarkMode>
                 </div>
             </div>
             <Link to="/">
