@@ -4,6 +4,7 @@ import { IoWater } from "react-icons/io5"
 import { BsCloudsFill } from "react-icons/bs"
 import Counter from "../../../hooks/Counter"
 
+
 export default function DetailsWeather({ DataWeather }) {
     const [WindSpeed, setWindSpeed] = useState(null)
     const [humidity, setHumidity] = useState(null)
