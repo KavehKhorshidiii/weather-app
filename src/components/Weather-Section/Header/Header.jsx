@@ -37,18 +37,19 @@ export default function Header() {
 
     return (
         <div className="items-center flex  justify-between">
-            <div className="w-3/10 flex justify-center  items-center gap-1 text-white">
+
+            <div className="w-5/10 md:w-3/10 flex justify-start items-center gap-1 text-white">
                 <IoLocationSharp className="text-3xl"></IoLocationSharp>
-                <span className="text-3xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
+                <span className="text-xl md:text-3xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
 
-            <div className="w-7/10 relative flex justify-center items-center gap-1 text-white">
+            <div className="w-5/10 md:w-7/10 relative flex justify-center items-center gap-1 text-white">
                 <input
                     onKeyDown={onkeydownFunc} //
                     placeholder="Enter your City Name"
                     value={cityName}
                     onChange={(e) => setCityName(e.target.value)}
-                    className="placeholder:text-xl border-2 focus:border-4 outline-none px-5 pb-1 text-2xl rounded-2xl w-full h-16 "
+                    className=" placeholder:text-sm md:placeholder:text-xl border-2 focus:border-4 outline-none px-5 pb-1 text-2xl rounded-2xl w-full h-16 "
                     type="text"
                 />
                 <button
@@ -82,6 +83,7 @@ export default function Header() {
                         : null}
                 </div>
             </div>
+
         </div>
     )
 }

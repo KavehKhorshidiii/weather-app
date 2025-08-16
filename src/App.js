@@ -6,19 +6,19 @@ import MyContextProvider from "./myContext/myContextProvider"
 export default function App() {
     return (
         <MyContextProvider>
-            <div className="h-screen bg-white dark:bg-black flex">
+            <div className=" md:flex md:flex-row-reverse h-screen bg-white dark:bg-black">
 
-                <div className="w-4/10 px-12 pt-2 overflow-auto">
+                <div className="md:w-7/12">
+                    <WeatherSection />
+                </div>
+
+                <div className="md:w-5/12 bg-black px-5 md:px-12 pt-2 md:overflow-auto ">
                     <div className=" sticky top-0 py-3 ">
                         <Menu></Menu>
                     </div>
-                    <div className="">
+                    <div className=" py-10">
                         <MenuSection />
                     </div>
-                </div>
-
-                <div className="w-6/10">
-                    <WeatherSection />
                 </div>
 
             </div>

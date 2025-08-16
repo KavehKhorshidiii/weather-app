@@ -40,14 +40,14 @@ export default function WeatherSection() {
 
 
     return (
-        <div className=" h-screen justify-between bg-white dark:bg-black">
-            <div className=" p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-l-weather flex flex-col h-full">
+        <div className=" md:h-screen justify-between bg-white dark:bg-black">
+            <div className=" p-5 md:p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-bl-weather rounded-br-weather md:rounded-tl-weather  md:rounded-br-none  flex flex-col h-full">
                 <div className=" ">
                     <Header></Header> 
                 </div>
-                <div className=" h-full flex py-20 ">
-                    <DetailsWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></DetailsWeather>
+                <div className=" justify-center items-center h-full flex flex-col space-y-10 md:flex-row-reverse py-8 md:py-20 ">
                     <ShowWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></ShowWeather>
+                    <DetailsWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></DetailsWeather>
                 </div>
             </div>
         </div>

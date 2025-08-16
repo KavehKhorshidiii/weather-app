@@ -30,15 +30,16 @@ export default function ShowWeather({ DataWeather, loadingWeatherData }) {
     }, [DataWeather])
 
     return (
-        <div className=" w-7/10 border-l-1 flex flex-col justify-center items-center border-white/80">
+        <div className=" w-7/10 flex flex-col justify-center items-center">
             <div className=" flex flex-col items-center">
-                <span className=" text-white font-bold text-9xl">{<Counter timerSpeed={50} targetNumber={Temp}></Counter>}</span>
+                
+                <span className=" text-white font-bold text-8xl md:text-9xl">{<Counter timerSpeed={50} targetNumber={Temp}></Counter>}</span>
 
                 {loadingWeatherData ? (
                     <Spinner></Spinner>
                 ) : (
                     <>
-                        {Temp !== null ? <span className=" text-white font-bold text-7xl">Today</span> : null}
+                        {Temp !== null ? <span className=" text-white font-bold text-2xl md:text-7xl">Today</span> : null}
 
                         <span className=" text-white flex items-center text-3xl">
                             {WeatherConditions}
@@ -46,9 +47,10 @@ export default function ShowWeather({ DataWeather, loadingWeatherData }) {
                                 <img className="size-20" src={iconUrl} alt="weather-img" />
                             ) : (
                                 <div className=" flex flex-col justify-center items-center">
-                                    <span className=" font-bold text-7xl">Welcome</span>
-                                    <span className=" flex justify-center items-center text-xl">
-                                        Enter your city name please<IoSearch></IoSearch>
+                                    <span className=" font-bold text-4xl xl:text-7xl md:text-5xl">Welcome</span>
+                                    <span className="text-lg md:text-xl xl:text-2xl flex justify-center items-center ">
+                                        Enter your city name please
+                                        <IoSearch></IoSearch>
                                     </span>
                                 </div>
                             )}
