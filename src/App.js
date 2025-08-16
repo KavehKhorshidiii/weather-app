@@ -7,7 +7,8 @@ export default function App() {
     return (
         <MyContextProvider>
             <div className="h-screen bg-white dark:bg-black flex">
-                <div className="w-4/10 px-12 pt-2 overflow-auto ">
+
+                <div className="w-4/10 px-12 pt-2 overflow-auto">
                     <div className=" sticky top-0 py-3 ">
                         <Menu></Menu>
                     </div>
@@ -16,7 +17,10 @@ export default function App() {
                     </div>
                 </div>
 
-                <WeatherSection />
+                <div className="w-6/10">
+                    <WeatherSection />
+                </div>
+
             </div>
         </MyContextProvider>
     )
