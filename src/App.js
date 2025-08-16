@@ -12,7 +12,7 @@ export default function App() {
                     <WeatherSection />
                 </div>
 
-                <div className="md:w-5/12 bg-black px-5 md:px-12 pt-2 md:overflow-auto ">
+                <div className="md:w-5/12 dark:bg-white bg-black px-5 md:px-12 pt-2 md:overflow-auto ">
                     <div className=" sticky top-0 py-3 ">
                         <Menu></Menu>
                     </div>

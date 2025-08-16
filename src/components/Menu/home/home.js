@@ -38,7 +38,7 @@ export default function home() {
                 <span className=" text-md font-bold text-weather-end">"AFTER EVERY STORM , THE SKY TURNS BLUE AGAIN"</span>
             </div>
 
-            <div className="pb-15 text-justify">
+            <div className="pb-15 text-justify text-black dark:text-sky-100">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta hic temporibus perspiciatis. A enim fugit est neque necessitatibus ad eveniet nostrum consectetur error ducimus ea
                 suscipit, adipisci eaque quos asperiores dolorum facere voluptate omnis incidunt libero! Qui distinctio vel autem eaque labore quis et, exercitationem fuga commodi repellendus nam
                 ullam voluptatum reprehenderit corrupti, assumenda, repellat cupiditate maiores voluptatem eum optio. Iusto quae odio, ea quis corrupti ullam, in, quo eos ipsa labore soluta non fuga?
