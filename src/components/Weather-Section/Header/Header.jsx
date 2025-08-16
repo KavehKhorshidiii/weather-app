@@ -14,7 +14,7 @@ export default function Header() {
 
     const { isLoading, data } = useQuery({
         queryKey: ["locationName", locationSearch],
-        queryFn: () => fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&limit=5&appid=635afb9504c0f920b54fd97746f11cf3`).then((res) => res.json()),
+        queryFn: () => fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&limit=5&appid=635afb9504c0f920b54fd97746f11cf3`).then((res) => res.json()),
         enabled: !!locationSearch,
     })
 
