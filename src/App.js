@@ -6,7 +6,7 @@ import MyContextProvider from "./myContext/myContextProvider"
 export default function App() {
     return (
         <MyContextProvider>
-            <div className=" md:flex md:flex-row-reverse h-screen  bg-black ">
+            <div className=" md:flex md:flex-row-reverse h-screen bg-white dark:bg-black ">
 
                 <div className="md:w-7/12">
                     <WeatherSection />
