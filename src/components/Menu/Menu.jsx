@@ -33,11 +33,11 @@ export default function Menu() {
     }
 
     return (
-        <div className="flex items-center border-2 justify-between p-2 rounded-4xl text-black dark:text-amber-50">
+        <div className="flex items-center backdrop-blur-sm border-2 justify-between p-2 rounded-4xl text-black dark:text-amber-50">
             <div className=" flex justify-around w-full">
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/">
                     <div className="Home">
-                        <GoHomeFill className=" hover:text-weather-mid text-3xl"></GoHomeFill>
+                        <GoHomeFill className="hover:text-weather-mid text-3xl"></GoHomeFill>
                     </div>
                 </NavLink>
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end flex justify-center items-center" : "flex justify-center items-center")} to="/profile">
@@ -56,7 +56,7 @@ export default function Menu() {
             </div>
             <Link to="/">
                 <div className="LogoApp p-2 rounded-3xl bg-gradient-to-l from-weather-start via-weather-mid to-weather-end  flex text-2xl items-center">
-                    <span className="">MyWEATHER</span>
+                    <span className="xl:block hidden text-lg xl:text-2xl">MyWEATHER</span>
                     <TiWeatherSnow className=" text-3xl" />
                 </div>
             </Link>
