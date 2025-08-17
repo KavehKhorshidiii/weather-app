@@ -62,7 +62,7 @@ export default function Header() {
                     <IoSearch className=" text-2xl md:text-3xl"></IoSearch>
                 </button>
 
-                <div className={`${CityNameBoxVisible ? "hidden" : "block"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
+                <div className={`${CityNameBoxVisible ? "hidden" : "block"} backdrop-blur-xl shadow-2xl font-bold flex gap-2 top-full flex-col absolute border-l-[0.5px] border-r-[0.5px] border-b-[0.5px] w-1/2 items-center rounded-b-2xl`}>
                     {data
                         ? data.map((item) => (
                               <span

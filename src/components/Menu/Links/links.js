@@ -34,14 +34,6 @@ export default function links() {
                     </a>
                 </div>
 
-                <div className=" group w-fit ">
-                    <a href="kavehkhorshidiii@gmail.com">
-                        <div className="group-hover:translate-x-5  dark:text-white text-black text-xl flex items-center gap-2">
-                            <SiGmail className=" "></SiGmail>
-                            <span className=" font-bold">Gmail</span>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
     )
