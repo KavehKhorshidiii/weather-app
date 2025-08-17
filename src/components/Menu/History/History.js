@@ -29,7 +29,7 @@ export default function History() {
 
     return (
         <div className="">
-            <span className="pt-3 pb-6 block font-bold text-weather-end text-3xl">History</span>
+            <span className="pt-3 pb-6 block font-bold text-weather-end text-xl md:text-2xl">History</span>
 
             <div className="border-2 p-2 rounded-3xl border-weather-end">
                 <div className=" py-2 px-4 border-white  bg-weather-end rounded-2xl  font-bold  flex">
