@@ -11,6 +11,7 @@
     --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-sky-100: oklch(95.1% 0.026 236.824);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -216,6 +217,9 @@
   .sticky {
     position: sticky;
   }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -227,6 +231,9 @@
   }
   .z-0 {
     z-index: 0;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .z-50 {
     z-index: 50;
@@ -464,6 +471,9 @@
   .border-\[0\.\] {
     border-color: 0.;
   }
+  .border-amber-400 {
+    border-color: var(--color-amber-400);
+  }
   .border-amber-500 {
     border-color: var(--color-amber-500);
   }
@@ -490,6 +500,15 @@
   }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-black\/30 {
+    background-color: color-mix(in srgb, #000 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
+    }
   }
   .bg-weather-end {
     background-color: var(--color-weather-end);

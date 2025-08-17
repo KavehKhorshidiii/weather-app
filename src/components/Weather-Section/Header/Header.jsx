@@ -37,13 +37,12 @@ export default function Header() {
 
     return (
         <div className="items-center flex  justify-between">
-
             <div className="w-4/10 md:w-3/10 flex justify-start items-center gap-1 text-white">
                 <IoLocationSharp className=" text-2xl md:text-3xl"></IoLocationSharp>
-                <span className="text-md md:text-3xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
+                <span className="text-md md:text-xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
 
-            <div className="w-6/10 md:w-7/10 relative flex justify-center items-center gap-1 text-white">
+            <div className="w-6/10 z-10 md:w-7/10 relative flex justify-center items-center gap-1 text-white">
                 <input
                     onKeyDown={onkeydownFunc} //
                     placeholder="Enter your City Name"
@@ -62,7 +61,11 @@ export default function Header() {
                     <IoSearch className=" text-2xl md:text-3xl"></IoSearch>
                 </button>
 
-                <div className={`${CityNameBoxVisible ? "hidden" : "block"} backdrop-blur-xl px-2 shadow-2xl font-bold flex gap-2 top-full flex-col absolute border-l-[0.5px] border-r-[0.5px] border-b-[0.5px] w-1/2 items-center rounded-b-2xl`}>
+                <div
+                    className={`${
+                        CityNameBoxVisible ? "hidden" : "block"
+                    } backdrop-blur-xl px-2 shadow-2xl font-bold flex gap-2 top-full flex-col absolute border-l-[0.5px] border-r-[0.5px] border-b-[0.5px] w-1/2 items-center rounded-b-2xl`}
+                >
                     {data
                         ? data.map((item) => (
                               <span
@@ -81,6 +84,9 @@ export default function Header() {
                         : null}
                 </div>
             </div>
+
+
+            <div onClick={()=>setCityNameBoxVisible(true)} className={` ${CityNameBoxVisible ? "hidden" : "block"} absolute z-0 inset-0`}></div>
 
         </div>
     )
