@@ -37,7 +37,7 @@ export default function home() {
             </span>
 
             <div className="flex  py-20 justify-center">
-                <span className=" text-sm md:text-md font-bold text-weather-end">"AFTER EVERY STORM , THE SKY TURNS BLUE AGAIN"</span>
+                <span className="text-xs md:text-xl md:text-md font-bold text-weather-end">"AFTER EVERY STORM , THE SKY TURNS BLUE AGAIN"</span>
             </div>
 
             <div className="pb-15 text-justify text-black dark:text-sky-100">
