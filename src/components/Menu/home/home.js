@@ -4,14 +4,16 @@ import { TiWeatherSnow } from "react-icons/ti"
 export default function home() {
     return (
         <div className=" text-amber-50 bg-white dark:bg-black h-full">
-            <span className=" py-10 flex justify-center items-center">
+            <span className="py-10 flex justify-center items-center">
                 <span className=" xl:text-5xl text-4xl font-bold bg-gradient-to-l from-weather-start via-weather-mid to-weather-end bg-clip-text text-transparent">MyWEATHER</span>
-                <TiWeatherSnow className=" animate-Rotate text-weather-start xl:text-7xl text-5xl"></TiWeatherSnow>
+                    <TiWeatherSnow className="text-weather-start xl:text-7xl text-5xl"></TiWeatherSnow>
             </span>
 
             <span className=" pb-9 flex flex-col">
                 <span className="text-xl md:text-2xl font-bold text-weather-end">Short Description</span>
-                <span className=" text-justify text-base md:text-xl text-black dark:text-sky-100">With MyWEATHER, you can check live weather conditions for any city and get forecasts for upcoming days.</span>
+                <span className=" text-justify text-base md:text-xl text-black dark:text-sky-100">
+                    With MyWEATHER, you can check live weather conditions for any city and get forecasts for upcoming days.
+                </span>
             </span>
 
             <span className=" py-9 flex flex-col">

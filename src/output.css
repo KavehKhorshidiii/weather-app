@@ -16,8 +16,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -52,7 +50,7 @@
     --color-weather-start: #4cc9ff;
     --color-weather-mid: #2e9bff;
     --color-weather-end: #0088ff;
-    --animate-Rotate: Rotate 2s infinite linear;
+    --animate-WeatherSnow: WeatherSnow 2s infinite linear;
   }
 }
 @layer base {
@@ -204,6 +202,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -219,11 +220,14 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
-  .z-10 {
-    z-index: 10;
+  .z-0 {
+    z-index: 0;
   }
   .z-50 {
     z-index: 50;
+  }
+  .z-\[9999\] {
+    z-index: 9999;
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -256,9 +260,6 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
   .h-full {
     height: 100%;
   }
@@ -285,12 +286,6 @@
   }
   .w-4\/10 {
     width: calc(4/10 * 100%);
-  }
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-  .w-5\/10 {
-    width: calc(5/10 * 100%);
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
@@ -322,8 +317,8 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .animate-Rotate {
-    animation: var(--animate-Rotate);
+  .animate-WeatherSnow {
+    animation: var(--animate-WeatherSnow);
   }
   .animate-spin {
     animation: var(--animate-spin);
@@ -401,6 +396,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -420,9 +419,6 @@
   .border-l-2 {
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
-  }
-  .border-amber-50 {
-    border-color: var(--color-amber-50);
   }
   .border-black {
     border-color: var(--color-black);
@@ -447,9 +443,6 @@
   }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-weather-end {
     background-color: var(--color-weather-end);
@@ -498,12 +491,6 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
   .py-9 {
     padding-block: calc(var(--spacing) * 9);
   }
@@ -522,12 +509,6 @@
   .pt-9 {
     padding-top: calc(var(--spacing) * 9);
   }
-  .pb-1 {
-    padding-bottom: calc(var(--spacing) * 1);
-  }
-  .pb-2 {
-    padding-bottom: calc(var(--spacing) * 2);
-  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
   }
@@ -537,26 +518,8 @@
   .pb-15 {
     padding-bottom: calc(var(--spacing) * 15);
   }
-  .pb-\[1\.5\] {
-    padding-bottom: 1.5;
-  }
-  .pb-\[1\.5px\] {
-    padding-bottom: 1.5px;
-  }
-  .pb-\[1\.\] {
-    padding-bottom: 1.;
-  }
-  .pb-\[1\] {
-    padding-bottom: 1;
-  }
   .pb-\[3px\] {
     padding-bottom: 3px;
-  }
-  .pb-\[5\.5px\] {
-    padding-bottom: 5.5px;
-  }
-  .pb-\[5px\] {
-    padding-bottom: 5px;
   }
   .text-center {
     text-align: center;
@@ -662,22 +625,10 @@
       }
     }
   }
-  .placeholder\:text-base {
-    &::placeholder {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
   .placeholder\:text-sm {
     &::placeholder {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
-    }
-  }
-  .placeholder\:text-xs {
-    &::placeholder {
-      font-size: var(--text-xs);
-      line-height: var(--tw-leading, var(--text-xs--line-height));
     }
   }
   .hover\:scale-150 {
@@ -828,14 +779,6 @@
     @media (width >= 48rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
-    }
-  }
-  .md\:placeholder\:text-sm {
-    @media (width >= 48rem) {
-      &::placeholder {
-        font-size: var(--text-sm);
-        line-height: var(--tw-leading, var(--text-sm--line-height));
-      }
     }
   }
   .md\:placeholder\:text-xl {
@@ -1042,7 +985,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes Rotate {
+@keyframes WeatherSnow {
   0% {
     transform: translateY(4px);
   }
