@@ -709,6 +709,16 @@
       overflow: auto;
     }
   }
+  .md\:rounded-2xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .md\:rounded-3xl {
+    @media (width >= 48rem) {
+      border-radius: var(--radius-3xl);
+    }
+  }
   .md\:rounded-tl-weather {
     @media (width >= 48rem) {
       border-top-left-radius: var(--radius-weather);
@@ -792,6 +802,11 @@
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
+    }
+  }
+  .xl\:rounded-3xl {
+    @media (width >= 80rem) {
+      border-radius: var(--radius-3xl);
     }
   }
   .xl\:text-2xl {

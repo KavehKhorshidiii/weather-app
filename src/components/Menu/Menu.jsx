@@ -54,10 +54,10 @@ export default function Menu() {
                     <MdDarkMode onClick={LightMode} className={`${darkModeStatus === "dark" ? "text-amber-300" : null} text-3xl`}></MdDarkMode>
                 </div>
             </div>
-            <Link to="/">
-                <div className="LogoApp p-2 rounded-3xl bg-gradient-to-l from-weather-start via-weather-mid to-weather-end  flex text-2xl items-center">
+            <Link to="/" className="flex justify-center items-center">
+                <div className="LogoApp p-2  rounded-full xl:rounded-3xl bg-gradient-to-l from-weather-start via-weather-mid to-weather-end  flex justify-center text-2xl items-center">
                     <span className="xl:block hidden text-lg xl:text-2xl">MyWEATHER</span>
-                    <TiWeatherSnow className=" text-3xl" />
+                    <TiWeatherSnow viewBox="0 0 25 25" className=" text-center animate-WeatherSnow text-4xl" />
                 </div>
             </Link>
         </div>
