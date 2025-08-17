@@ -25,12 +25,12 @@ export default function DetailsWeather({ DataWeather }) {
     return (
         <div className=" flex md:border-r-1   border-white/80 flex-row md:flex-col w-3/10  h-full justify-center gap-20 md:justify-around ">
             <div className="flex flex-col justify-center items-center">
-                <FaWind className=" text-3xl text-white "></FaWind>
+                <FaWind className=" text-xl md:text-3xl text-white "></FaWind>
                 <span className=" text-white text-2xl md:text-3xl">{<Counter timerSpeed={80} targetNumber={WindSpeed}></Counter>}<span className="md:text-3xl text-xl">km/h</span></span>
                 <span className=" text-white">Wind</span>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <IoWater className=" text-3xl text-white "></IoWater>
+                <IoWater className="text-xl md:text-3xl text-white "></IoWater>
                 <span className=" text-white text-2xl md:text-3xl">{<Counter timerSpeed={80} targetNumber={humidity}></Counter>}<span className="md:text-3xl text-xl">%</span></span>
                 <span className=" text-white">Humidity</span>
             </div>

@@ -219,6 +219,12 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-50 {
+    z-index: 50;
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -415,6 +421,9 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 2px;
   }
+  .border-amber-50 {
+    border-color: var(--color-amber-50);
+  }
   .border-black {
     border-color: var(--color-black);
   }
@@ -489,6 +498,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -536,6 +548,9 @@
   }
   .pb-\[1\] {
     padding-bottom: 1;
+  }
+  .pb-\[3px\] {
+    padding-bottom: 3px;
   }
   .pb-\[5\.5px\] {
     padding-bottom: 5.5px;
@@ -645,6 +660,12 @@
         --tw-translate-x: calc(var(--spacing) * 5);
         translate: var(--tw-translate-x) var(--tw-translate-y);
       }
+    }
+  }
+  .placeholder\:text-base {
+    &::placeholder {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .placeholder\:text-sm {
@@ -766,6 +787,11 @@
   .md\:py-20 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:pb-\[5px\] {
+    @media (width >= 48rem) {
+      padding-bottom: 5px;
     }
   }
   .md\:text-2xl {

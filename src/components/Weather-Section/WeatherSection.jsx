@@ -45,7 +45,7 @@ export default function WeatherSection() {
                 <div className=" ">
                     <Header></Header> 
                 </div>
-                <div className=" justify-center items-center h-full flex flex-col space-y-10 md:flex-row-reverse py-8 md:py-20 ">
+                <div className=" justify-center items-center h-full flex flex-col space-y-10 md:flex-row-reverse py-9 md:py-20 ">
                     <ShowWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></ShowWeather>
                     <DetailsWeather loadingWeatherData={loadingWeatherData} DataWeather={weatherData}></DetailsWeather>
                 </div>

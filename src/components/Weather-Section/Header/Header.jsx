@@ -39,7 +39,7 @@ export default function Header() {
         <div className="items-center flex  justify-between">
 
             <div className="w-4/10 md:w-3/10 flex justify-start items-center gap-1 text-white">
-                <IoLocationSharp className="text-3xl"></IoLocationSharp>
+                <IoLocationSharp className=" text-2xl md:text-3xl"></IoLocationSharp>
                 <span className="text-md md:text-3xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
 
@@ -49,7 +49,7 @@ export default function Header() {
                     placeholder="Enter your City Name"
                     value={cityName}
                     onChange={(e) => setCityName(e.target.value)}
-                    className=" placeholder:text-sm text-start md:placeholder:text-xl border-2 focus:border-4 outline-none px-2 pb-[5px] text-xl md:text-2xl rounded-2xl w-full h-12 md:h-16 "
+                    className=" placeholder:text-sm text-start md:placeholder:text-xl border-2 focus:border-4 outline-none px-2 pb-[3px] md:pb-[5px] text-base md:text-2xl rounded-2xl w-full h-12 md:h-16 "
                     type="text"
                 />
                 <button
@@ -59,7 +59,7 @@ export default function Header() {
                     }}
                     className=" absolute text-3xl right-5"
                 >
-                    <IoSearch></IoSearch>
+                    <IoSearch className=" text-2xl md:text-3xl"></IoSearch>
                 </button>
 
                 <div className={`${CityNameBoxVisible ? "hidden" : "block"}  flex top-full flex-col absolute border-l-2 border-r-2 border-b-2 w-1/2 items-center rounded-b-2xl`}>
