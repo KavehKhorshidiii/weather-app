@@ -49,7 +49,7 @@ export default function Header() {
                     placeholder="Enter your City Name"
                     value={cityName}
                     onChange={(e) => setCityName(e.target.value)}
-                    className=" placeholder:text-sm text-start md:placeholder:text-xl border-2 focus:border-4 outline-none px-2 pb-2 text-2xl rounded-2xl w-full h-16 "
+                    className=" placeholder:text-sm text-start md:placeholder:text-xl border-2 focus:border-4 outline-none px-2 pb-[5px] text-xl md:text-2xl rounded-2xl w-full h-12 md:h-16 "
                     type="text"
                 />
                 <button
@@ -69,9 +69,7 @@ export default function Header() {
                                   key={item.lat}
                                   onClick={() => {
                                       setCityNameBoxVisible(true)
-
                                       setConfirmedCity({ city: item.name, country: item.country })
-
                                       setCoords({ lat: item.lat, lon: item.lon })
                                       setCityName("")
                                       localStorageCitiesData(item.name, item.country, item.lat, item.lon)
