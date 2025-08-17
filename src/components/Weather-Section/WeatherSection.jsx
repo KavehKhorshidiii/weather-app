@@ -11,7 +11,7 @@ import { MyContext } from "../../myContext/myContextProvider"
 
 export default function WeatherSection() {
 
-    const {coords, setCoords} = useContext(MyContext) 
+    const {coords} = useContext(MyContext) 
     const [weatherData, setWeatherData] = useState(null)
     const [loadingWeatherData, setLoadingWeatherData] = useState(false)
     

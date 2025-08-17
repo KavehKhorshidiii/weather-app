@@ -26,7 +26,7 @@ export default function links() {
                 </div>
 
                 <div className=" group w-fit ">
-                    <a href="#">
+                    <a href="https://t.me/kavehkhorshidiiii">
                         <div className=" flex group-hover:translate-x-5  dark:text-white text-black text-xl items-center gap-2">
                             <FaTelegramPlane className=""></FaTelegramPlane>
                             <span className=" font-bold">Telegram</span>
