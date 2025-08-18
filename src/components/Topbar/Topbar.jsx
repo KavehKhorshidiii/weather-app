@@ -33,7 +33,7 @@ export default function Topbar() {
 
     return (
         <div className="flex items-center dark:shadow-menu-dark shadow-menu-light backdrop-blur-sm  justify-between p-2 rounded-4xl text-black dark:text-amber-50">
-            <div className=" flex justify-around w-full">
+            <div className=" cursor-pointer flex justify-around w-full">
                 {/* Home */}
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/">
                     <div className="Home">
@@ -58,7 +58,7 @@ export default function Topbar() {
                 </div>
             </div>
             {/* website Logo */}
-            <Link to="/" className="flex justify-center items-center">
+            <Link to="/" className=" cursor-pointer flex justify-center items-center">
                 <div className="LogoApp p-2  rounded-full xl:rounded-3xl bg-gradient-to-l from-weather-start via-weather-mid to-weather-end  flex justify-center text-2xl items-center">
                     <span className="xl:block hidden text-lg xl:text-2xl">MyWEATHER</span>
                     <TiWeatherSnow viewBox="0 0 25 25" className=" text-center animate-WeatherSnow text-4xl" />

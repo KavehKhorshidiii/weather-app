@@ -76,6 +76,7 @@ export default function Header() {
                     {data   //Search result dropdown 
                         ? data.map((item) => (
                               <span
+                                  className=" cursor-pointer"
                                   key={item.lat}
                                   onClick={() => {
                                       setCityNameBoxVisible(true)
