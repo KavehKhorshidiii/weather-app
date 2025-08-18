@@ -55,7 +55,7 @@ export default function Header() {
                     placeholder="Enter your City Name"
                     value={cityName}
                     onChange={(e) => setCityName(e.target.value)}
-                    className=" placeholder:text-sm text-start md:placeholder:text-xl border-2 focus:border-4 outline-none px-2 pb-[3px] md:pb-[5px] text-base md:text-2xl rounded-2xl w-full h-12 md:h-16 "
+                    className=" placeholder:text-sm text-start md:placeholder:text-xl border-1 focus:inset-shadow-white focus:inset-shadow-sm outline-none px-2 pb-[3px] md:pb-[5px] text-base md:text-2xl rounded-2xl w-full h-12 md:h-16 "
                     type="text"
                 />
                 <button
