@@ -46,10 +46,10 @@ export default function History() {
                             <span className=" text-black dark:text-white text-center w-1/3">{item.country}</span>
                             <span className=" text-2xl text-end w-1/3">
                                 <button className=" mr-3 rounded-full" onClick={() => SendDataWeather(item)}>
-                                    <FaEye className="cursor-pointer hover:scale-150 text-weather-end"></FaEye>
+                                    <FaEye className=" transition-transform cursor-pointer hover:scale-150 text-weather-end"></FaEye>
                                 </button>
                                 <button onClick={() => deleteFun(item.city)}>
-                                    <ImBin className="cursor-pointer hover:scale-150 text-red-700"></ImBin>
+                                    <ImBin className=" transition-transform  cursor-pointer hover:scale-150 text-red-700"></ImBin>
                                 </button>
                             </span>
                         </div>
