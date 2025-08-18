@@ -1,33 +1,29 @@
 @import "tailwindcss";
 
+/* dark */
 @custom-variant dark (&:where(.dark, .dark *));
 
- 
-
 @theme {
-    /*  */
+    /* Radius */
     --radius-weather: 5rem;
-    /*  */
-    --shadow-menu-dark:0px 0px 20px -5px white;
-    --shadow-menu-light:0px 0px 20px -5px black;
-    /*  */
+    /* shadows */
+    --shadow-menu-dark: 0px 0px 20px -5px white;
+    --shadow-menu-light: 0px 0px 20px -5px black;
+    /* colors */
     --color-weather-start: #4cc9ff;
     --color-weather-mid: #2e9bff;
     --color-weather-end: #0088ff;
-    /*  */
-    --animate-WeatherSnow: WeatherSnow 2s infinite linear;
+    /* animation */
+    --animate-WeatherSnow: WeatherSnow 2.4s infinite linear;
     @keyframes WeatherSnow {
         0% {
             transform: translateY(4px);
         }
-
         50% {
             transform: translateY(-4px);
         }
-
         100% {
             transform: translateY(4px);
         }
     }
-    /*  */
 }

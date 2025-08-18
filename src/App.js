@@ -1,28 +1,34 @@
-import MenuSection from "./components/Menu-Section/MenuSection"
-import Menu from "./components/Menu/Menu"
-import WeatherSection from "./components/Weather-Section/WeatherSection"
+import ErrorAlert from "./ErrorAlert/ErrorAlert"
+import MainSection from "./components/MainSection/MainSection"
+import Topbar from "./components/Topbar/Topbar"
+import WeatherSection from "./components/WeatherSection/WeatherSection"
 import MyContextProvider from "./myContext/myContextProvider"
-import ErrorAlert from "./errorAlert/errorAlert"
 
 export default function App() {
     return (
         <MyContextProvider>
-            <div className=" md:flex md:flex-row-reverse h-screen bg-white dark:bg-black ">
+            {/* Root layout container with unified background - full-height viewport */}
+            <div className="md:flex md:flex-row-reverse h-screen bg-white dark:bg-black ">
 
-                <div className="md:w-7/12">
+                {/* complementary content - Right Container */}
+                <aside className=" md:order-1 md:w-7/12">
                     <WeatherSection />
-                </div>
+                </aside>
 
-                <div className="md:w-5/12 dark:bg-black bg-white px-5 md:px-12 pt-2 md:overflow-auto ">
-                    <div className=" sticky top-0 py-3 ">
-                        <Menu></Menu>
-                    </div>
-                    <div className=" py-10">
-                        <MenuSection />
-                    </div>
-                </div>
-                
-                <ErrorAlert></ErrorAlert> 
+                {/* MainSection - Left Container */}
+                <main className=" md:order-2 pt-2 px-5 bg-white dark:bg-black md:px-12 md:w-5/12 md:overflow-y-auto">
+                    {/* Sticky Topbar  */}
+                    <header className="sticky z-20 top-0 py-3">
+                        <Topbar/>
+                    </header>
+                    {/* Main menu and routed pages */}
+                    <section>
+                        <MainSection/>
+                    </section>
+                </main>
+
+                {/* Error Alert */}
+                <ErrorAlert/>
 
             </div>
         </MyContextProvider>

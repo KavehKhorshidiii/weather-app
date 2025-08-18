@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
-import { IoSearch } from "react-icons/io5"
+import { useEffect, useState } from "react"
+import Spinner from "../../../Spinner/Spinner"
 import Counter from "../../../hooks/Counter"
-import Spinner from "../../../spinner/spinner"
+import { IoSearch } from "react-icons/io5"
 
-export default function ShowWeather({ DataWeather, loadingWeatherData }) {
+export default function ShowWeather({ weatherData, loadingWeatherData }) {
     const [Temp, setTemp] = useState(null)
     const [WeatherConditions, setWeatherConditions] = useState(null)
     const [iconCode, setIconCode] = useState(null)
@@ -18,16 +18,16 @@ export default function ShowWeather({ DataWeather, loadingWeatherData }) {
     }, [iconCode])
 
     useEffect(() => {
-        if (DataWeather) {
-            setTemp(Math.floor(DataWeather.main.temp))
-            setWeatherConditions(DataWeather.weather[0].main)
-            setIconCode(DataWeather.weather[0].icon)
+        if (weatherData) {
+            setTemp(Math.floor(weatherData.main.temp))
+            setWeatherConditions(weatherData.weather[0].main)
+            setIconCode(weatherData.weather[0].icon)
         } else {
             setTemp(null)
             setWeatherConditions(null)
             setIconCode(null)
         }
-    }, [DataWeather])
+    }, [weatherData])
 
     return (
         <div className=" w-7/10 flex flex-col justify-center items-center">

@@ -1,9 +1,9 @@
-import Links from "../components/Menu/Links/links"
-import Profile from "../components/Menu/History/History"
-import Home from "../components/Menu/home/home"
+import Links from "../components/MainSection/Links/Links"
+import History from "../components/MainSection/History/History"
+import Home from "../components/MainSection/Home/Home"
 
 export const Routes = [
-    { path: "/", element: <Home></Home> },
-    { path: "/links", element: <Links></Links> },
-    { path: "/profile", element: <Profile></Profile> },
+    { path: "/", element: <Home/> },    //Home page
+    { path: "/links", element: <Links/> },    //Link page
+    { path: "/profile", element: <History/> },    //History page
 ]

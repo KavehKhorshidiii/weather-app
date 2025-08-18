@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 
-export default function Counter({ targetNumber , timerSpeed }) {
+//counter weather status number
+export default function Counter({ targetNumber, timerSpeed }) {
     const [number, setNumber] = useState(0)
 
     useEffect(() => {
@@ -15,8 +16,7 @@ export default function Counter({ targetNumber , timerSpeed }) {
         }, timerSpeed)
 
         return () => clearInterval(intervalId)
-        
-    }, [targetNumber])
+    }, [targetNumber, timerSpeed])
 
     return <span>{number}</span>
 }

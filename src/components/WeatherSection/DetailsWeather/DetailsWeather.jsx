@@ -5,22 +5,22 @@ import { BsCloudsFill } from "react-icons/bs"
 import Counter from "../../../hooks/Counter"
 
 
-export default function DetailsWeather({ DataWeather }) {
+export default function DetailsWeather({ weatherData }) {
     const [WindSpeed, setWindSpeed] = useState(null)
     const [humidity, setHumidity] = useState(null)
     const [Cloudiness, setCloudiness] = useState(null)
 
     useEffect(() => {
-        if (DataWeather) {
-            setWindSpeed(Math.floor(DataWeather?.wind?.speed))
-            setHumidity(DataWeather.main.humidity)
-            setCloudiness(DataWeather.clouds.all)
+        if (weatherData) {
+            setWindSpeed(Math.floor(weatherData?.wind?.speed))
+            setHumidity(weatherData.main.humidity)
+            setCloudiness(weatherData.clouds.all)
         }else{
             setWindSpeed(null)
             setHumidity(null)
             setCloudiness(null)
         }
-    }, [DataWeather])
+    }, [weatherData])
 
     return (
         <div className=" flex md:border-r-1   border-white/80 flex-row md:flex-col w-3/10  h-full justify-center gap-20 md:justify-around ">
