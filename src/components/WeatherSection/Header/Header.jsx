@@ -12,7 +12,6 @@ export default function Header() {
     const [cityName, setCityName] = useState("")
     const [cityNameBoxVisible, setCityNameBoxVisible] = useState(true)
     const [locationSearch, setLocationSearch] = useState(null)
-
     // Fetch weather data using React Query
     const { isLoading, data, error } = useQuery({
         queryKey: ["locationName", locationSearch],
@@ -22,8 +21,7 @@ export default function Header() {
     // Handle error
     useEffect(() => {
         if (error) {setError(true)}
-    }, [error])
-
+    }, [error , setError])
     // Save city to localStorage
     const localStorageCitiesData = (city, country, lat, lon) => {
         let myLocalStorageCities = JSON.parse(localStorage.getItem("searchCities")) || []
@@ -34,7 +32,6 @@ export default function Header() {
             localStorage.setItem("searchCities", JSON.stringify([{ city: city, country: country, lat: lat, lon: lon }, ...myLocalStorageCities]))
         }
     }
-
     // key down handler 
     const onkeydownFunc = (e) => {
         if (e.code === "Enter") {
