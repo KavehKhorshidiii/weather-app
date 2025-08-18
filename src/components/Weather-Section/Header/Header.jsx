@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { IoLocationSharp } from "react-icons/io5"
 import { IoSearch } from "react-icons/io5"
 import { useQuery } from "@tanstack/react-query"
@@ -7,16 +7,22 @@ import { MyContext } from "../../../myContext/myContextProvider"
 import Spinner from "../../../spinner/spinner"
 
 export default function Header() {
-    const { setCoords, ConfirmedCity, setConfirmedCity } = useContext(MyContext) // this state
+    const { setCoords, ConfirmedCity, setConfirmedCity,setError } = useContext(MyContext) // this state
     const [cityName, setCityName] = useState("")
     const [CityNameBoxVisible, setCityNameBoxVisible] = useState(true)
     const [locationSearch, setLocationSearch] = useState(null)
 
-    const { isLoading, data } = useQuery({
+    const { isLoading , data , error } = useQuery({
         queryKey: ["locationName", locationSearch],
         queryFn: () => fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&limit=5&appid=635afb9504c0f920b54fd97746f11cf3`).then((res) => res.json()),
         enabled: !!locationSearch,
     })
+
+    useEffect(()=>{
+        if(error){
+            setError(true)
+        }
+    },[error])
 
     const localStorageCitiesData = (city, country, lat, lon) => {
         let myLocalStorageCities = JSON.parse(localStorage.getItem("searchCities")) || []
@@ -36,7 +42,8 @@ export default function Header() {
     }
 
     return (
-        <div className="items-center flex  justify-between">
+        <div className="items-center flex justify-between">
+
             <div className="w-4/10 md:w-3/10 flex justify-start items-center gap-1 text-white">
                 <IoLocationSharp className=" text-2xl md:text-3xl"></IoLocationSharp>
                 <span className="text-md md:text-xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>

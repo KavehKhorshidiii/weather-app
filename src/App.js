@@ -2,6 +2,7 @@ import MenuSection from "./components/Menu-Section/MenuSection"
 import Menu from "./components/Menu/Menu"
 import WeatherSection from "./components/Weather-Section/WeatherSection"
 import MyContextProvider from "./myContext/myContextProvider"
+import ErrorAlert from "./errorAlert/errorAlert"
 
 export default function App() {
     return (
@@ -20,6 +21,8 @@ export default function App() {
                         <MenuSection />
                     </div>
                 </div>
+                
+                <ErrorAlert></ErrorAlert> 
 
             </div>
         </MyContextProvider>

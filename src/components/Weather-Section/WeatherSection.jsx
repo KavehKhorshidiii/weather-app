@@ -11,12 +11,12 @@ import { MyContext } from "../../myContext/myContextProvider"
 
 export default function WeatherSection() {
 
-    const {coords} = useContext(MyContext) 
+    const {coords , setError} = useContext(MyContext) 
     const [weatherData, setWeatherData] = useState(null)
     const [loadingWeatherData, setLoadingWeatherData] = useState(false)
     
 
-    const { data, isLoading } = useQuery({
+    const { data, isLoading , error } = useQuery({
         queryKey: ["weather", coords],
         queryFn: () => fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lon}&appid=635afb9504c0f920b54fd97746f11cf3&units=metric`).then((res) => res.json()),
         enabled: !!coords,
@@ -25,6 +25,8 @@ export default function WeatherSection() {
     useEffect(() => {
         if (data) {
             setWeatherData(data)
+        }else if(error){
+            setError(true)
         }else{
             setWeatherData(null)
         }
@@ -40,7 +42,8 @@ export default function WeatherSection() {
 
 
     return (
-        <div className=" md:h-screen justify-between bg-white dark:bg-black">
+        <div className=" md:h-screen relative justify-between bg-white dark:bg-black">
+
             <div className=" p-5 md:p-10 bg-gradient-to-l from-weather-start via-weather-mid to-weather-end rounded-bl-weather rounded-br-weather md:rounded-tl-weather  md:rounded-br-none  flex flex-col h-full">
                 <div className=" ">
                     <Header></Header> 
