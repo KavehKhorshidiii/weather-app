@@ -8,6 +8,9 @@
     /*  */
     --radius-weather: 5rem;
     /*  */
+    --shadow-menu-dark:0px 0px 20px -5px white;
+    --shadow-menu-light:0px 0px 20px -5px black;
+    /*  */
     --color-weather-start: #4cc9ff;
     --color-weather-mid: #2e9bff;
     --color-weather-end: #0088ff;
