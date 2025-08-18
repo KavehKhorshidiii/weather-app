@@ -45,7 +45,7 @@ export default function Header() {
         <div className="items-center flex justify-between">
 
             <div className="w-4/10 md:w-3/10 flex justify-start items-center gap-1 text-white">
-                <IoLocationSharp className=" text-2xl md:text-3xl"></IoLocationSharp>
+                <IoLocationSharp className="text-2xl md:text-3xl"></IoLocationSharp>
                 <span className="text-md md:text-xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
             </div>
 
