@@ -16,8 +16,6 @@
 
 ## 📄 Description
 
-This project was left incomplete due to limited access to a proper backend environment.
-
 
 <br/>
 <br/>
@@ -26,7 +24,6 @@ This project was left incomplete due to limited access to a proper backend envir
 ## ✨ Features
 
 - Error Alert
-- Sidebar 
 
 
 <br/>
