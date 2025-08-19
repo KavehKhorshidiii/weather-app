@@ -40,7 +40,7 @@
 
 1. Clone the project 
 ```bash
-git clone https://github.com/Kaveh-Khorshidi/AdminDashboard.git
+git clone https://github.com/KavehKhorshidiii/weather-app.git
 ```
 
 3. Move into the project directory
