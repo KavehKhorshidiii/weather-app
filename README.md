@@ -70,7 +70,7 @@ npm start
 
 ## ⚙️ Tech Stack
 - React.js
--react-query
+- react-query
 
 
 <br/>
