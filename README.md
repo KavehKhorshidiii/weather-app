@@ -70,7 +70,6 @@ npm start
 
 ## ⚙️ Tech Stack
 - React.js
-- Axios
 -react-query
 
 
