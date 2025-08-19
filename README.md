@@ -1,4 +1,4 @@
-<h1 align="center">⚙️ Admin Dashboard </h1>
+<h1 align="center">⚙️ Weather App </h1>
 
 
 <br/>
