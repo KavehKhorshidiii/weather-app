@@ -15,7 +15,15 @@
 
 
 ## 📄 Description
-Weather App is a simple application to display the current weather in different cities around the world.
+A modern weather application, Weather App is a simple application to display the current weather in different cities around the world.
+
+
+<br/>
+<br/>
+
+
+## 🖱️ Usage
+1. Enter a city name in the search bar
 
 
 <br/>
@@ -25,15 +33,18 @@ Weather App is a simple application to display the current weather in different 
 ## ✨ Features
 
 - Error Alert
+- History
 - Search for cities and display current weather conditions
+- City Search
 - Shows temperature, humidity, wind speed, and sky status (clear, cloudy, etc.)
 - Simple and responsive user interface
 - Uses OpenWeatherMap API
 - Support for temperature units
-- Light Mode
-- Responsive UI(Mobile , Pc)
-  
-
+- Light Mode - Dark Mode (Default => Dark)
+- Responsive design 
+- Mobile view support
+- Loading spinner
+- **Search history with one-click access to previously searched cities**
 
 <br/>
 <br/>
@@ -51,12 +62,10 @@ Weather App is a simple application to display the current weather in different 
 ```bash
 git clone https://github.com/KavehKhorshidiii/weather-app.git
 ```
-
 2. Move into the project directory
 ```bash
 cd my-app
 ```
-
 3. Install dependencies
 ```bash
 npm install
@@ -65,31 +74,33 @@ npm install
 ```bash
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 ```
-
 5. Start the development server
 npm start
 ```bash
 npm start
 ```
 
-
-
 <br/>
 <br/>
-
 
 
 ## ⚙️ Tech Stack
 - React.js
 - React-query
 - TailwindCss
+- OpenWeatherMap API
 
 
 <br/>
 <br/>
 
 ## 🎯 Project Goals
-- Practice building a simple app using React 
+- Practice working with **React.js** and strengthen component-based architecture skills  
+- Learn and apply **React Query** for data fetching, caching, and state management  
+- Get hands-on experience with **TailwindCSS** for building modern, responsive UIs  
+- Learn how to integrate and consume **third-party APIs** (OpenWeatherMap)  
+- Improve error handling and user experience in real-world scenarios  
+- Prepare the project for future enhancements (unit testing, multi-language support, deployment)  
 
 
 <br/>
@@ -99,6 +110,7 @@ npm start
 ## 📌 TODO (Next Steps)
 
 - [ ] Add unit testing (using Vitest or Jest)
+- [ ] Switch between Celsius and Fahrenheit units
 
 
 <br/>
