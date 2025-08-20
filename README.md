@@ -52,25 +52,24 @@ Weather App is a simple application to display the current weather in different 
 git clone https://github.com/KavehKhorshidiii/weather-app.git
 ```
 
-3. Move into the project directory
+2. Move into the project directory
 ```bash
 cd my-app
 ```
 
-5. Install dependencies
+3. Install dependencies
 ```bash
 npm install
 ```
-
-7. Start the development server
-npm start
-```bash
-npm start
-```
-
-8. Run Tailwind in watch mode
+4. Run Tailwind in watch mode
 ```bash
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+```
+
+5. Start the development server
+npm start
+```bash
+npm start
 ```
 
 
