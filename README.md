@@ -15,6 +15,7 @@
 
 
 ## 📄 Description
+Weather App is a simple application to display the current weather in different cities around the world.
 
 
 <br/>
@@ -24,6 +25,14 @@
 ## ✨ Features
 
 - Error Alert
+- Search for cities and display current weather conditions
+- Shows temperature, humidity, wind speed, and sky status (clear, cloudy, etc.)
+- Simple and responsive user interface
+- Uses OpenWeatherMap API
+- Support for temperature units
+- Light Mode
+- Responsive UI(Mobile , Pc)
+  
 
 
 <br/>
@@ -59,6 +68,11 @@ npm start
 npm start
 ```
 
+8. Run Tailwind in watch mode
+```bash
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+```
+
 
 
 <br/>
@@ -68,7 +82,8 @@ npm start
 
 ## ⚙️ Tech Stack
 - React.js
-- react-query
+- React-query
+- TailwindCss
 
 
 <br/>
