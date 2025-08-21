@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { FaWind } from "react-icons/fa"
 import { IoWater } from "react-icons/io5"
 import { BsCloudsFill } from "react-icons/bs"
-import Counter from "../../../hooks/Counter"
+import Counter from "../../../Hooks/Counter"
 
 
 export default function DetailsWeather({ weatherData }) {

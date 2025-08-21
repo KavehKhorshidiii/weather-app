@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useContext } from "react"
-import { MyContext } from "../myContext/myContextProvider"
+import { MyContext } from "../MyContext/myContextProvider"
 
 export default function ErrorAlert() {
     const { error, setError } = useContext(MyContext)

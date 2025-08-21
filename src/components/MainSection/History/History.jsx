@@ -1,6 +1,6 @@
 import { ImBin } from "react-icons/im"
 import { useContext, useEffect } from "react"
-import { MyContext } from "../../../myContext/myContextProvider"
+import { MyContext } from "../../../MyContext/myContextProvider"
 import { useState } from "react"
 import { FaEye } from "react-icons/fa6"
 

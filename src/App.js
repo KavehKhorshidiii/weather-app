@@ -2,7 +2,7 @@ import ErrorAlert from "./ErrorAlert/ErrorAlert"
 import MainSection from "./components/MainSection/MainSection"
 import Topbar from "./components/Topbar/Topbar"
 import WeatherSection from "./components/WeatherSection/WeatherSection"
-import MyContextProvider from "./myContext/myContextProvider"
+import MyContextProvider from "./MyContext/myContextProvider"
 
 export default function App() {
     return (

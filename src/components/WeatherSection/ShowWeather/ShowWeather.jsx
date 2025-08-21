@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Spinner from "../../../Spinner/Spinner"
-import Counter from "../../../hooks/Counter"
+import Counter from "../../../Hooks/Counter"
 import { IoSearch } from "react-icons/io5"
 
 export default function ShowWeather({ weatherData, loadingWeatherData }) {

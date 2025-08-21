@@ -3,7 +3,7 @@ import { IoLocationSharp } from "react-icons/io5"
 import { IoSearch } from "react-icons/io5"
 import { useQuery } from "@tanstack/react-query"
 import { useContext } from "react"
-import { MyContext } from "../../../myContext/myContextProvider"
+import { MyContext } from "../../../MyContext/myContextProvider"
 import Spinner from "../../../Spinner/Spinner"
 
 export default function Header() {

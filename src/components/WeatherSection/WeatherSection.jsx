@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 // context app
 import { useContext } from "react"
-import { MyContext } from "../../myContext/myContextProvider"
+import { MyContext } from "../../MyContext/myContextProvider"
 
 export default function WeatherSection() {
     // App context
