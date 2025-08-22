@@ -1,17 +1,21 @@
 <h1 align="center">❄️ Weather App </h1>
 
 
+
 <br/>
 <br/>
 <br/>
+
 
 
 ## 🌐 Live Demo  
 [Open the Live Website](https://weather-app-five-chi-91.vercel.app/)
 
 
+
 <br/>
 <br/>
+
 
 
 ## 📄 Description
