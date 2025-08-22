@@ -46,6 +46,7 @@ A modern weather application, Weather App is a simple application to display the
 - Loading spinner
 - **Search history with one-click access to previously searched cities**
 
+
 <br/>
 <br/>
 
