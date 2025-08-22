@@ -7,6 +7,7 @@
 
 
 ## 🌐 Live Demo  
+
 [Open the Live Website](https://weather-app-five-chi-91.vercel.app/)
 
 
@@ -15,6 +16,7 @@
 
 
 ## 📄 Description
+
 A modern weather application, Weather App is a simple application to display the current weather in different cities around the world.
 
 
@@ -23,6 +25,7 @@ A modern weather application, Weather App is a simple application to display the
 
 
 ## 🖱️ Usage
+
 1. Enter a city name in the search bar
 
 
