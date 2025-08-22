@@ -90,6 +90,7 @@ npm start
 
 
 ## ⚙️ Tech Stack
+
 - React.js
 - React-query
 - TailwindCss
@@ -101,6 +102,7 @@ npm start
 
 
 ## 🎯 Project Goals
+
 - Practice working with **React.js** and strengthen component-based architecture skills  
 - Learn and apply **React Query** for data fetching, caching, and state management  
 - Get hands-on experience with **TailwindCSS** for building modern, responsive UIs  
@@ -124,6 +126,7 @@ npm start
 
 
 ## ⚖️ License
+
 This project is licensed under the MIT License.
 
 
