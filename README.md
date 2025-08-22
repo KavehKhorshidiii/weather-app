@@ -96,6 +96,7 @@ npm start
 <br/>
 <br/>
 
+
 ## 🎯 Project Goals
 - Practice working with **React.js** and strengthen component-based architecture skills  
 - Learn and apply **React Query** for data fetching, caching, and state management  
