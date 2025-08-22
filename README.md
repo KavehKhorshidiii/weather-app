@@ -12,10 +12,8 @@
 [Open the Live Website](https://weather-app-five-chi-91.vercel.app/)
 
 
-
 <br/>
 <br/>
-
 
 
 ## 📄 Description
