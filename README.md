@@ -41,6 +41,7 @@ A modern weather application, Weather App is a simple application to display the
 - Shows temperature, humidity, wind speed, and sky status (clear, cloudy, etc.)
 - Error Alert
 - Light Mode - Dark Mode (Default => Dark)
+- Persistent Theme Preference (via localStorage)
 - Loading spinner
 - Simple and responsive user interface
 - Support for temperature units
