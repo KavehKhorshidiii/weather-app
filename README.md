@@ -35,19 +35,17 @@ A modern weather application, Weather App is a simple application to display the
 
 ## ✨ Features
 
-- Error Alert
 - History
+- Search history with one-click access to previously searched cities
 - Search for cities and display current weather conditions
-- City Search
 - Shows temperature, humidity, wind speed, and sky status (clear, cloudy, etc.)
-- Simple and responsive user interface
-- Uses OpenWeatherMap API
-- Support for temperature units
+- Error Alert
 - Light Mode - Dark Mode (Default => Dark)
-- Responsive design 
-- Mobile view support
 - Loading spinner
-- **Search history with one-click access to previously searched cities**
+- Simple and responsive user interface
+- Support for temperature units
+- Mobile view support
+- Uses OpenWeatherMap API
 
 
 <br/>
@@ -92,8 +90,8 @@ npm start
 ## ⚙️ Tech Stack
 
 - React.js
-- React-query
 - TailwindCss
+- React-query
 - OpenWeatherMap API
 
 
