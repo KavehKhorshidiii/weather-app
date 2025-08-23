@@ -125,7 +125,7 @@ npm start
 
 ## ⚖️ License
 
-This project is licensed under the MIT License.
+**Proprietary code – do not use without permission.**
 
 
 <br/>

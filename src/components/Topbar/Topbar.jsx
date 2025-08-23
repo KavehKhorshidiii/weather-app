@@ -33,7 +33,7 @@ export default function Topbar() {
 
     return (
         <div className="flex items-center dark:shadow-menu-dark shadow-menu-light backdrop-blur-sm  justify-between p-2 rounded-4xl text-black dark:text-amber-50">
-            <div className=" cursor-pointer flex justify-around w-full">
+            <div className=" flex justify-around w-full">
                 {/* Home */}
                 <NavLink className={(Active) => (Active.isActive === true ? "text-weather-end" : null)} to="/">
                     <div className="Home">
@@ -54,7 +54,7 @@ export default function Topbar() {
                 </NavLink>
                 {/* Dark mode */}
                 <div className="DarkMode">
-                    <MdDarkMode onClick={toggleDarkMode} className={`${darkModeStatus === "dark" ? "text-amber-300" : null} text-3xl`}></MdDarkMode>
+                    <MdDarkMode onClick={toggleDarkMode} className={`${darkModeStatus === "dark" ? "text-amber-300" : null} cursor-pointer text-3xl`}></MdDarkMode>
                 </div>
             </div>
             {/* website Logo */}

@@ -8,7 +8,7 @@ import Spinner from "../../../Spinner/Spinner"
 
 export default function Header() {
     //context app
-    const { setCoords, ConfirmedCity, setConfirmedCity, setError } = useContext(MyContext)
+    const { setCoords, confirmedCity, setConfirmedCity, setError } = useContext(MyContext)
     const [cityName, setCityName] = useState("")
     const [cityNameBoxVisible, setCityNameBoxVisible] = useState(true)
     const [locationSearch, setLocationSearch] = useState(null)
@@ -45,7 +45,7 @@ export default function Header() {
         <div className="items-center flex justify-between">
             <div className="w-4/10 md:w-3/10 flex justify-start items-center gap-1 text-white">
                 <IoLocationSharp className="text-2xl md:text-3xl"></IoLocationSharp>
-                <span className="text-md md:text-xl">{isLoading ? <Spinner></Spinner> : ConfirmedCity ? `${ConfirmedCity.city} - ${ConfirmedCity.country}` : "Your City"}</span>
+                <span className="text-md md:text-xl">{isLoading ? <Spinner></Spinner> : confirmedCity ? `${confirmedCity.city} - ${confirmedCity.country}` : "Your City"}</span>
             </div>
 
             {/* City search input */}
