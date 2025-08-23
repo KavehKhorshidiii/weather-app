@@ -156,9 +156,9 @@ This project currently does not include any automated tests. However, I plan to 
 ###### Mobile
 <table>
   <tr>
-    <td><img src="./public/screenShot and screenReconrd/img4.png" width="300"/></td>
-    <td><img src="./public/screenShot and screenReconrd/img1.png" width="300"/></td>
-    <td><img src="./public/screenShot and screenReconrd/img2.png" width="300"/></td>
+    <td><img src="./public/screenShot/img4.png" width="300"/></td>
+    <td><img src="./public/screenShot/img1.png" width="300"/></td>
+    <td><img src="./public/screenShot/img2.png" width="300"/></td>
   </tr>
 </table>
 
