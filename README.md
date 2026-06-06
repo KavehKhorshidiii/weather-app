@@ -100,6 +100,7 @@ npm start
 <br/>
 
 
+
 ## Project Goals
 
 - Practice working with **React.js** and strengthen component-based architecture skills  
