@@ -1,4 +1,4 @@
-<h1 align="center">❄️ Weather App </h1>
+<h1 align="center">Weather App </h1>
 
 
 <br/>
@@ -6,7 +6,7 @@
 <br/>
 
 
-## 🌐 Live Demo  
+## Live Demo  
 
 [Open the Live Website](https://weather-app-five-chi-91.vercel.app/)
 
@@ -15,7 +15,7 @@
 <br/>
 
 
-## 📄 Description
+## Description
 
 A modern weather application, Weather App is a simple application to display the current weather in different cities around the world.
 
@@ -24,7 +24,7 @@ A modern weather application, Weather App is a simple application to display the
 <br/>
 
 
-## 🖱️ Usage
+## Usage
 
 1. Enter a city name in the search bar
 
@@ -33,7 +33,7 @@ A modern weather application, Weather App is a simple application to display the
 <br/>
 
 
-## ✨ Features
+## Features
 
 - History
 - Search history with one-click access to previously searched cities
@@ -53,7 +53,7 @@ A modern weather application, Weather App is a simple application to display the
 <br/>
 
 
-## 📦 Installation & Usage
+## Installation & Usage
 
 ###### Requirements 
 - Node.js 
@@ -88,7 +88,7 @@ npm start
 <br/>
 
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - React.js
 - TailwindCss
@@ -100,7 +100,7 @@ npm start
 <br/>
 
 
-## 🎯 Project Goals
+## Project Goals
 
 - Practice working with **React.js** and strengthen component-based architecture skills  
 - Learn and apply **React Query** for data fetching, caching, and state management  
@@ -114,7 +114,7 @@ npm start
 <br/>
 
 
-## 📌 TODO (Next Steps)
+## TODO (Next Steps)
 
 - [ ] Add unit testing (using Vitest or Jest)
 - [ ] Switch between Celsius and Fahrenheit units
@@ -124,7 +124,7 @@ npm start
 <br/>
 
 
-## ⚖️ License
+## License
 
 **Proprietary code – do not use without permission.**
 
@@ -133,7 +133,7 @@ npm start
 <br/>
 
 
-## 🧪 Testing
+## Testing
 
 This project currently does not include any automated tests. However, I plan to add testing in the future using either **Vitest** or **Jest**.
 
