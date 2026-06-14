@@ -21,14 +21,14 @@ export default function ErrorAlert() {
         }, 35)
 
         return () => clearInterval(errorInterval)
-    }, [error])
+    }, [error , setCounter])
 
     // When progress reaches 100%, disable error
     useEffect(() => {
         if (counter === 100) {
             setError(false)
         }
-    }, [counter])
+    }, [setError, counter])
 
     return (
         <div className={`w-56 ${error ? "visited" : "invisible"} overflow-hidden z-50 h-10 absolute justify-between right-2 rounded-lg flex items-center px-3 bg-red-600 top-2 `}>
