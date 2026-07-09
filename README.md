@@ -16,6 +16,11 @@ A modern weather application, Weather App is a simple application to display the
 
 <br/>
 
+## Note
+This project uses a third-party weather API. If the application doesn't work or weather data isn't displayed, it may be due to internet restrictions or temporary inability to access the API, resulting in no response from the server.
+
+<br/>
+
 ## Features
 - History
 - Search history with one-click access to previously searched cities
