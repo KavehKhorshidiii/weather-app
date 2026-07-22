@@ -16,7 +16,7 @@ export default function App() {
                 </aside>
 
                 {/* MainSection - Left Container */}
-                <main className=" md:order-2 pt-2 px-5 bg-white dark:bg-black md:px-12 md:w-5/12 md:overflow-y-auto">
+                <main className=" md:order-2 border-blue-600 border-2 overflow-y-scroll  pt-2 px-5 bg-white dark:bg-black md:px-12 md:w-5/12 md:overflow-y-auto">
                     {/* Sticky Topbar  */}
                     <header className="sticky z-20 top-0 py-3">
                         <Topbar/>
