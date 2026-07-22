@@ -13,21 +13,21 @@ export default function Links() {
                 </div>
             </section>
             {/* Social Media */}
-            <section className="SocialMedia">
+            <section className="SocialMedia ">
                 <h2 className=" flex text-xl md:text-2xl font-bold text-weather-end items-center">Let’s Connect</h2>
                 {/* github */}
-                <div className=" group w-fit ">
+                <div className="w-fit">
                     <a href="https://github.com/KavehKhorshidiii">
-                        <div className=" group-hover:translate-x-5  dark:text-white text-black text-xl md:text-2xl flex items-center gap-2">
+                        <div className="transition-all duration-200  hover:translate-x-5  dark:text-white text-black text-xl md:text-2xl flex items-center gap-2">
                             <FaGithubAlt className="text-xl md:text-2xl"></FaGithubAlt>
                             <span className="  font-bold">GitHub</span>
                         </div>
                     </a>
                 </div>
                 {/* telegram */}
-                <div className=" group w-fit ">
+                <div className=" w-fit ">
                     <a href="https://t.me/kavehkhorshidiiii">
-                        <div className=" flex group-hover:translate-x-5  dark:text-white text-black text-xl md:text-2xl items-center gap-2">
+                        <div className=" flex transition-all duration-200 hover:translate-x-5  dark:text-white text-black text-xl md:text-2xl items-center gap-2">
                             <FaTelegramPlane className="text-xl md:text-2xl"></FaTelegramPlane>
                             <span className=" font-bold">Telegram</span>
                         </div>
